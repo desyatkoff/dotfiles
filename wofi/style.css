@@ -1,0 +1,42 @@
+* {
+    color: #e6e6e6;
+    font-style: normal;
+    background: transparent;
+    font-family: "Noto Sans"; 
+}
+
+#window {
+    margin: 8px;
+    padding: 4px;
+    border-radius: 8px;
+    background: #1a1a1a;
+    border: 2px solid #00ffff;
+}
+
+#input {
+    padding: 4px;
+    margin-bottom: 8px;
+    border-radius: 8px;
+}
+
+#outer-box {
+    padding: 16px;
+}
+
+#img {
+    margin-right: 8px;
+}
+
+#entry {
+    padding: 8px;
+    border-radius: 16px;
+}
+
+#entry:selected {
+    background-color: #262626;
+}
+
+#text {
+    margin: 2px;
+}
+
