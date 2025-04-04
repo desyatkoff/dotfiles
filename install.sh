@@ -5,8 +5,8 @@ mv ~/.config/fastfetch/ ~/.config/fastfetch-old/
 mv ~/.config/hypr/ ~/.config/hypr-old/
 mv ~/.config/wofi/ ~/.config/wofi-old/
 
-cp -r alacritty/* ~/.config/alacritty/
-cp -r fastfetch/* ~/.config/fastfetch/
-cp -r hypr/* ~/.config/hypr/
-cp -r wofi/* ~/.config/wofi/
+cp alacritty/* ~/.config/alacritty/
+cp fastfetch/* ~/.config/fastfetch/
+cp hypr/* ~/.config/hypr/
+cp wofi/* ~/.config/wofi/
 
