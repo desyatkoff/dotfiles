@@ -81,10 +81,8 @@ background = default
 foreground = default
 
 gradient = 1
-gradient_color_1 = "#009999"
-gradient_color_2 = "#00ffff"
-gradient_color_3 = "#47ffff"
-gradient_color_4 = "#ffffff"
+gradient_color_1 = "#1793d1"
+gradient_color_2 = "#ffffff"
 
 [smoothing]
 
