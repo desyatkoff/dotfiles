@@ -24,13 +24,13 @@ set seconds off
 set date on
 set auto-size on
 set auto-ratio on
-style active-fg #00ffff
+style active-fg #1793d1
 style inactive-fg clear
-style colon-fg #00ffff
+style colon-fg #1793d1
 style active-bg reverse
 style inactive-bg clear
 style colon-bg clear
-style date #00ffff
+style date #1793d1
 style background clear
 style text clear
 style prompt clear

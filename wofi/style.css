@@ -6,30 +6,30 @@
 }
 
 #window {
-    margin: 8px;
+    margin: 4px;
     padding: 4px;
     border-radius: 8px;
     background: #1a1a1a;
-    border: 2px solid #00ffff;
+    border: 2px solid #1793d1;
 }
 
 #input {
     padding: 4px;
-    margin-bottom: 8px;
+    margin: 4px;
     border-radius: 8px;
 }
 
 #outer-box {
-    padding: 16px;
+    padding: 4px;
 }
 
 #img {
-    margin-right: 8px;
+    margin: 4px;
 }
 
 #entry {
-    padding: 8px;
-    border-radius: 16px;
+    padding: 4px;
+    border-radius: 8px;
 }
 
 #entry:selected {
@@ -37,6 +37,6 @@
 }
 
 #text {
-    margin: 2px;
+    margin: 4px;
 }
 
