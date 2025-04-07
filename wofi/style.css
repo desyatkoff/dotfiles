@@ -9,7 +9,7 @@
     margin: 4px;
     padding: 4px;
     border-radius: 8px;
-    background: #1a1a1a;
+    background: #0d0d0d;
     border: 2px solid #1793d1;
 }
 
@@ -20,7 +20,7 @@
 }
 
 #outer-box {
-    padding: 4px;
+    padding: 16px;
 }
 
 #img {

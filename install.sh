@@ -1,6 +1,37 @@
 #!/usr/bin/env bash
 
 
+##############################################
+#                                            #
+#  INSTALLER SCRIPT FOR DESYATKOFF DOTFILES  #
+#                                            #
+##############################################
+
+
+# 0. Before installation
+
+# Warning!
+# You can continue only if you already have Hyprland and all its dependencies installed
+
+
+# 1. Install required packages (if you change something, you should edit all the configs as well)
+
+sudo pacman -S --needed \
+    cava \
+    fastfetch \
+    kitty \
+    peaclock \
+    wofi \
+    cliphist \
+    mako \
+    hyprshot \
+    hyprpaper \
+    nnn \
+    firefox
+
+
+# 2. Rename old configs so you can restore your old settings if needed
+
 if [ -d ~/.config/cava/ ]; then
     mv -v ~/.config/cava/ \
         ~/.config/cava-old/
@@ -31,6 +62,9 @@ if [ -d ~/.config/wofi/ ]; then
         ~/.config/wofi-old/
 fi
 
+
+# 3. Create special directories for the new configs
+
 mkdir -v ~/.config/cava/
 
 mkdir -v ~/.config/fastfetch/
@@ -43,6 +77,8 @@ mkdir -v ~/.config/peaclock/
 
 mkdir -v ~/.config/wofi/
 
+
+# 4. Copy the new configs
 
 cp -v cava/* \
     ~/.config/cava/
@@ -61,4 +97,10 @@ cp -v peaclock/* \
 
 cp -v wofi/* \
     ~/.config/wofi/
+
+
+# 5. After installation
+
+# Success!
+# Enjoy your new clean Hyprland setup with my personal dotfiles that I use every day
 
