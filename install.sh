@@ -17,15 +17,15 @@
 # 1. Install required packages (if you change something, you should edit all the configs as well)
 
 sudo pacman -S --needed \
+    hyprshot \
+    hyprpaper \
     cava \
     fastfetch \
     kitty \
+    mako \
     peaclock \
     wofi \
     cliphist \
-    mako \
-    hyprshot \
-    hyprpaper \
     nnn \
     firefox
 
@@ -52,6 +52,11 @@ if [ -d ~/.config/kitty/ ]; then
         ~/.config/kitty-old/
 fi
 
+if [ -d ~/.config/mako/ ]; then
+    mv -v ~/.config/mako/ \
+        ~/.config/mako-old/
+fi
+
 if [ -d ~/.config/peaclock/ ]; then
     mv -v ~/.config/peaclock/ \
         ~/.config/peaclock-old/
@@ -73,6 +78,8 @@ mkdir -v ~/.config/hypr/
 
 mkdir -v ~/.config/kitty/
 
+mkdir -v ~/.config/mako/
+
 mkdir -v ~/.config/peaclock/
 
 mkdir -v ~/.config/wofi/
@@ -91,6 +98,9 @@ cp -v hypr/* \
 
 cp -v kitty/* \
     ~/.config/kitty/
+
+cp -v mako/* \
+    ~/.config/mako/
 
 cp -v peaclock/* \
     ~/.config/peaclock/
