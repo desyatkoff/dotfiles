@@ -21,6 +21,7 @@ sudo pacman -S --needed \
     hyprpaper \
     cava \
     fastfetch \
+    helix \
     kitty \
     mako \
     peaclock \
@@ -40,6 +41,11 @@ fi
 if [ -d ~/.config/fastfetch/ ]; then
     mv -v ~/.config/fastfetch/ \
         ~/.config/fastfetch-old/
+fi
+
+if [ -d ~/.config/helix/ ]; then
+    mv -v ~/.config/helix/ \
+        ~/.config/helix-old/
 fi
 
 if [ -d ~/.config/hypr/ ]; then
@@ -74,6 +80,8 @@ mkdir -v ~/.config/cava/
 
 mkdir -v ~/.config/fastfetch/
 
+mkdir -v ~/helix/
+
 mkdir -v ~/.config/hypr/
 
 mkdir -v ~/.config/kitty/
@@ -92,6 +100,9 @@ cp -v cava/* \
 
 cp -v fastfetch/* \
     ~/.config/fastfetch/
+
+cp -v helix/* \
+    ~/.config/helix/
 
 cp -v hypr/* \
     ~/.config/hypr/

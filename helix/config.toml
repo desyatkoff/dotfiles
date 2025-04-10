@@ -1,0 +1,155 @@
+theme = "github_dark"
+
+[editor]
+scrolloff = 4
+mouse = true
+default-yank-register = "\""
+middle-click-paste = true
+scroll-lines = 4
+shell = [
+    "sh",
+    "-c"
+]
+line-number = "absolute"
+cursorline = true
+cursorcolumn = false
+continue-comments = true
+gutters = [
+    "diagnostics",
+    "spacer",
+    "line-numbers",
+    "spacer",
+    "diff"
+]
+auto-completion = true
+path-completion = true
+auto-format = false
+idle-timeout = 250
+completion-timeout = 250
+preview-completion-insert = true
+completion-trigger-len = 1
+completion-replace = false
+auto-info = true
+true-color = false
+undercurl = false
+rulers = []
+bufferline = "always"
+color-modes = false
+text-width = 99
+workspace-lsp-roots = []
+default-line-ending = "lf"
+insert-final-newline = false
+popup-border = "all"
+indent-heuristic = "simple"
+jump-label-alphabet = "abcdefghijklmnopqrstuvwxyz"
+end-of-line-diagnostics = "disable"
+clipboard-provider = "wayland"
+
+[editor.statusline]
+left = [
+    "mode",
+    "spinner"
+]
+center = [
+    "file-name"
+]
+right = [
+    "diagnostics",
+    "selections",
+    "position",
+    "file-encoding",
+    "file-line-ending",
+    "file-type"
+]
+separator = "|"
+mode.normal = "NORMAL"
+mode.insert = "INSERT"
+mode.select = "SELECT"
+
+[editor.lsp]
+enable = true
+display-messages = true
+display-progress-messages = true
+auto-signature-help = true
+display-inlay-hints = true
+display-signature-help-docs = true
+snippets = true
+goto-reference-include-declaration = true
+
+[editor.cursor-shape]
+insert = "bar"
+normal = "block"
+select = "underline"
+
+[editor.file-picker]
+hidden = true
+follow-symlinks = true
+deduplicate-links = true
+parents = true
+ignore = true
+git-ignore = true
+git-global = true
+git-exclude = true
+#max-depth =
+
+[editor.auto-pairs]
+"(" = ")"
+"{" = "}"
+"[" = "]"
+"\"" = "\""
+"`" = "`"
+"<" = ">"
+
+[editor.auto-save]
+focus-lost = false
+after-delay.enable = false
+after-delay.timeout = 3000
+
+[editor.search]
+smart-case = true
+wrap-around = true
+
+[editor.whitespace.render]
+space = "all"
+tab = "all"
+nbsp = "none"
+nnbsp = "none"
+newline = "none"
+
+[editor.whitespace.characters]
+space = "·"
+nbsp = "⍽"
+nnbsp = "␣"
+tab = "→"
+newline = "⏎"
+tabpad = "·"
+
+[editor.indent-guides]
+render = true
+character = "|"
+skip-levels = 0
+
+[editor.soft-wrap]
+enable = true
+max-wrap = 24
+max-indent-retain = 0
+wrap-indicator = ""
+
+[editor.smart-tab]
+enable = true
+supersede-menu = false
+
+[editor.inline-diagnostics]
+cursor-line = "info"
+other-lines = "info"
+prefix-len = 1
+max-wrap = 24
+max-diagnostics = 8
+
+[keys.normal]
+"y" = [
+    "yank",
+    ":clipboard-yank"
+]
+"p" = ":clipboard-paste-after"
+
