@@ -88,7 +88,6 @@ ignore = true
 git-ignore = true
 git-global = true
 git-exclude = true
-#max-depth =
 
 [editor.auto-pairs]
 "(" = ")"
@@ -143,11 +142,4 @@ other-lines = "disable"
 prefix-len = 1
 max-wrap = 24
 max-diagnostics = 8
-
-[keys.normal]
-"y" = [
-    "yank",
-    ":clipboard-yank"
-]
-"p" = ":clipboard-paste-after"
 
