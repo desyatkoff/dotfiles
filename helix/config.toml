@@ -1,7 +1,7 @@
 theme = "github_dark"
 
 [editor]
-scrolloff = 4
+scrolloff = 24
 mouse = true
 default-yank-register = "\""
 middle-click-paste = true
@@ -69,7 +69,7 @@ enable = true
 display-messages = true
 display-progress-messages = true
 auto-signature-help = true
-display-inlay-hints = false
+display-inlay-hints = true
 display-signature-help-docs = true
 snippets = true
 goto-reference-include-declaration = true
@@ -137,8 +137,8 @@ enable = true
 supersede-menu = false
 
 [editor.inline-diagnostics]
-cursor-line = "disable"
-other-lines = "disable"
+cursor-line = "underline"
+other-lines = "underline"
 prefix-len = 1
 max-wrap = 24
 max-diagnostics = 8
