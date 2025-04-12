@@ -137,8 +137,8 @@ enable = true
 supersede-menu = false
 
 [editor.inline-diagnostics]
-cursor-line = "underline"
-other-lines = "underline"
+cursor-line = "info"
+other-lines = "info"
 prefix-len = 1
 max-wrap = 24
 max-diagnostics = 8
