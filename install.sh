@@ -17,7 +17,7 @@
 # 1. Install required packages (if you change something, you should edit all the configs as well)
 
 sudo pacman -S --needed \
-    hyprshot \
+    grimblast \
     hyprpaper \
     cava \
     fastfetch \
