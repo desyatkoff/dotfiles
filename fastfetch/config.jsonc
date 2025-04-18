@@ -1,77 +1,119 @@
 {
     "$schema": "https://github.com/fastfetch-cli/fastfetch/raw/dev/doc/json_schema.json",
     "logo": {
-	    "source": "~/.config/fastfetch/arch-ascii.txt"
+        "source": "~/.config/fastfetch/arch-ascii.txt",
+        "padding": {
+            "top": 2
+        }
     },
     "display": {
-        "separator": " "
+        "separator": " ",
+        "constants": [
+            "────────────────────────────────────"
+        ]
     },
     "modules": [
-        "break",
         {
-                "type": "custom",
-                "format": "\u001b[90m      \u001b[31m    \u001b[32m    \u001b[33m    \u001b[34m    \u001b[35m    \u001b[36m      \u001b[37m"
-            },
-        "break",
+            "type": "custom",
+            "format": "┌{$1}{$1}┐",
+            "outputColor": "36"
+        },
         {
             "type": "title",
-            "keyWidth": 10
-        },
-        "break",
-        {
-            "type": "os",
-            "key": " OS       ",
-            "keyColor": "31"
+            "format": "# {user-name}@{host-name}",
+            "outputColor": "36"
         },
         {
-            "type": "kernel",
-            "key": " Kernel   ",
-            "keyColor": "33"
-        },
-        {
-            "type": "packages",
-            "key": " Packages ",
-            "keyColor": "32"
-        },
-        {
-            "type": "shell",
-            "key": " Shell    ",
-            "keyColor": "34"
-        },
-        {
-            "type": "wm",
-            "key": " WM       ",
-            "keyColor": "35"
-        },
-        {
-            "type": "cpu",
-            "format": "{1} @ {7}",
-            "key": " CPU      ",
-            "keyColor": "34"
-        },
-        {
-            "type": "gpu",
-            "format": "{1} {2}",
-            "key": "󰢮 GPU      ",
-            "keyColor": "32"
-        },
-        {
-            "type": "memory",
-            "key": " Memory   ",
-            "keyColor": "33"
-        },
-        {
-            "type": "swap",
-            "key": "󰓡 Swap     ",
-            "keyColor": "31"
+            "type": "custom",
+            "format": "└{$1}{$1}┘",
+            "outputColor": "36"
         },
         "break",
         {
             "type": "custom",
-            "format": "\u001b[90m      \u001b[31m    \u001b[32m    \u001b[33m    \u001b[34m    \u001b[35m    \u001b[36m      \u001b[37m"
+            "format": " {#90}  {#31}  {#32}  {#33}  {#34}  {#35}  {#36}  {#37}                            {#37}  {#36}  {#35}  {#34}  {#33}  {#32}  {#31}  {#90}  "
         },
         "break",
-        "break"
+        {
+            "type": "custom",
+            "format": "┌{$1}{$1}┐",
+            "outputColor": "36"
+        },
+        {
+            "type": "custom",
+            "format": "# Software",
+            "outputColor": "36"
+        },
+        {
+            "type": "custom",
+            "format": "└{$1}{$1}┘",
+            "outputColor": "36"
+        },        {
+            "type": "os",
+            "key": "│ ┌  OS          ",
+            "keyColor": "36"
+        },
+        {
+            "type": "kernel",
+            "key": "│ ├  Kernel      ",
+            "keyColor": "36"
+        },
+        {
+            "type": "packages",
+            "key": "│ ├󰏖  Packages    ",
+            "keyColor": "36"
+        },
+        {
+            "type": "wm",
+            "key": "│ ├  WM          ",
+            "keyColor": "36"
+        },
+        {
+            "type": "shell",
+            "key": "│ └  Shell       ",
+            "keyColor": "36"
+        },
+        "break",
+        {
+            "type": "custom",
+            "format": "┌{$1}{$1}┐",
+            "outputColor": "36"
+        },        {
+            "type": "custom",
+            "format": "# Hardware",
+            "outputColor": "36"
+        },
+        {
+            "type": "custom",
+            "format": "└{$1}{$1}┘",
+            "outputColor": "36"
+        },        {
+            "type": "cpu",
+            "key": "│ ┌󰻠  CPU         ",
+            "keyColor": "36"
+        },
+        {
+            "type": "gpu",
+            "key": "│ ├󰍛  GPU         ",
+            "keyColor": "36"
+        },
+        {
+            "type": "memory",
+            "key": "│ ├󰑭  RAM         ",
+            "keyColor": "36",
+            "format": "{1} / {2}"
+        },
+        {
+            "type": "swap",
+            "key": "│ ├󰓡  Swap        ",
+            "keyColor": "36",
+            "format": "{1} / {2}"
+        },
+        {
+            "type": "display",
+            "key": "│ └󰍹  Monitor     ",
+            "keyColor": "36"
+        }
     ]
 }
 
