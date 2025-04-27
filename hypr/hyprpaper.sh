@@ -19,4 +19,3 @@ WP="$WP_DIR/wall$NEXT_WP_IDX.png"
 hyprctl hyprpaper wallpaper ", $WP"
 
 echo "$NEXT_WP_IDX" > "$WP_IDX_FILE"
-
