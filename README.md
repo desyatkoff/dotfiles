@@ -32,7 +32,7 @@ Please, check the `install.sh` script before launching (or even manually install
     + `Super` + `Shift` + `W` -> Previous wallpaper
     + `Super` + `Alt` + `W` -> Default Hyprland wallpaper
     + `Print Screen` -> Take a screenshot
-    + Others (see `bind.conf` in `hypr/` directory for more)
+    + Others (see `binds.conf` in `hypr/` directory for more)
 * And the best feature is... The excellence of minimalistic Arch Linux Hyprland :)
 
 ## Preview
