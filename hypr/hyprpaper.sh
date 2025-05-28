@@ -3,19 +3,32 @@
 # Wallpaper switcher for Hyprpaper
 
 
-WP_DIR="/usr/share/hypr"
-MAX_WPS=3
-WP_IDX_FILE="$HOME/.config/hypr/wp_idx"
+WP_DIR="$HOME/Wallpapers/"
+WP_IDX_FILE="$HOME/.config/hypr/hyprpaper_index.txt"
+WPS=($(find "$WP_DIR" -type f \( -name "*.png" -o -name "*.jpg" \) | sort))
+WP_COUNT=${#WPS[@]}
 
-if [ -f "$WP_IDX_FILE" ]; then
-    WP_IDX=$(cat "$WP_IDX_FILE")
+if [[ -f "$WP_IDX_FILE" ]]; then
+    CURRENT_IDX=$(<"$WP_IDX_FILE")
 else
-    WP_IDX=0
+    CURRENT_IDX=0
 fi
 
-NEXT_WP_IDX=$(( (WP_IDX + 1) % MAX_WPS ))
-WP="$WP_DIR/wall$NEXT_WP_IDX.png"
+DIRECTION="next"
 
+if [[ "$1" == "--previous" ]]; then
+    DIRECTION="previous"
+fi
+
+if [[ "$DIRECTION" == "next" ]]; then
+    NEXT_IDX=$(( (CURRENT_IDX + 1) % WP_COUNT ))
+else
+    NEXT_IDX=$(( (CURRENT_IDX - 1 + WP_COUNT) % WP_COUNT ))
+fi
+
+echo "$NEXT_IDX" > "$WP_IDX_FILE"
+
+WP="${WPS[$NEXT_IDX]}"
+
+hyprctl hyprpaper preload "$WP"
 hyprctl hyprpaper wallpaper ", $WP"
-
-echo "$NEXT_WP_IDX" > "$WP_IDX_FILE"

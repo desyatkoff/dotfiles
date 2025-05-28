@@ -14,23 +14,21 @@
 # You can continue only if you already have Hyprland and all its dependencies installed
 
 
-# 1. Install required packages (if you change something, you should edit all the configs as well)
+# 1. Install required packages (if you remove or change something, you should edit all the configs as well)
 
 sudo pacman -S --needed \
+    cava \
+    cliphist \
+    dolphin \
+    fastfetch \
+    firefox \
     grim \
+    helix \
+    hyprpaper \
     slurp \
     swappy \
-    hyprpaper \
-    cava \
-    fastfetch \
-    helix \
-    kitty \
-    mako \
-    peaclock \
-    wofi \
-    cliphist \
-    nnn \
-    firefox
+    wl-clipboard \
+    wofi
 
 
 # 2. Rename old configs so you can restore your old settings if needed
@@ -65,12 +63,6 @@ if [ -d ~/.config/kitty/ ]; then
         ~/.config/kitty-old/
 fi
 
-if [ -d ~/.config/mako/ ]; then
-    mv -v \
-        ~/.config/mako/ \
-        ~/.config/mako-old/
-fi
-
 if [ -d ~/.config/peaclock/ ]; then
     mv -v \
         ~/.config/peaclock/ \
@@ -95,8 +87,6 @@ mkdir -v ~/helix/
 mkdir -v ~/.config/hypr/
 
 mkdir -v ~/.config/kitty/
-
-mkdir -v ~/.config/mako/
 
 mkdir -v ~/.config/peaclock/
 
@@ -126,10 +116,6 @@ cp -v \
     ~/.config/kitty/
 
 cp -v \
-    mako/* \
-    ~/.config/mako/
-
-cp -v \
     peaclock/* \
     ~/.config/peaclock/
 
@@ -142,4 +128,3 @@ cp -v \
 
 # Success!
 # Enjoy your new clean Hyprland setup with my personal dotfiles that I use every day
-
