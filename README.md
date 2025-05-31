@@ -27,6 +27,7 @@ Please, check the `install.sh` script before launching (or even manually install
     + `Super` + `T` -> Toggle floating mode for current window
     + `Super` + `F` -> Toggle fullscreen mode for current window
     + `Super` + `V` -> Open clipboard
+    + `Super` + `.` -> Open emoji picker
     + `Super` + `P` -> Toggle pseudo mode for current window
     + `Super` + `J` -> Toggle split mode
     + `Super` + `W` -> Next wallpaper
