@@ -30,5 +30,4 @@ echo "$NEXT_IDX" > "$WP_IDX_FILE"
 
 WP="${WPS[$NEXT_IDX]}"
 
-hyprctl hyprpaper preload "$WP"
-hyprctl hyprpaper wallpaper ", $WP"
+hyprctl hyprpaper reload ", $WP"

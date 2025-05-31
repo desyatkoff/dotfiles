@@ -25,11 +25,13 @@ sudo pacman -S --needed \
     grim \
     helix \
     hyprpaper \
+    peaclock \
     slurp \
     swappy \
     wl-clipboard \
     waybar \
-    wofi
+    wofi \
+    wofi-emoji
 
 
 # 2. Rename old configs so you can restore your old settings if needed

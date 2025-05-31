@@ -2,18 +2,18 @@
     border: none;
     font-size: 12px;
     border-radius: 0;
-    font-family: Noto Font;
+    font-family: "Noto Sans";
 }
 
 window#waybar {
     background: transparent;
 }
 
-#custom-menu {
+#custom-app-launcher {
+    color: #ffffff;
     font-size: 24px;
-    color: #1793d1;
-    margin-top: 4px;
-    margin-left: 4px;
+    margin-top: 8px;
+    margin-left: 8px;
     margin-right: 4px;
     padding-left: 12px;
     border-radius: 8px;
@@ -22,8 +22,12 @@ window#waybar {
     border: 2px solid #1793d1;
 }
 
+#custom-app-launcher:hover {
+    background: #1793d1;
+}
+
 #workspaces {
-    margin-top: 4px;
+    margin-top: 8px;
     margin-left: 4px;
     margin-right: 4px;
     border-radius: 8px;
@@ -33,8 +37,8 @@ window#waybar {
 
 #workspaces button {
     color: #ffffff;
-    min-width: 16px;
-    min-height: 16px;
+    min-width: 20px;
+    min-height: 20px;
     background: transparent;
 }
 
@@ -43,7 +47,7 @@ window#waybar {
 }
 
 #workspaces button:hover {
-    color: #ffffff;
+    color: #1793d1;
     box-shadow: inherit;
     text-shadow: inherit;
     border-radius: inherit;
@@ -57,7 +61,7 @@ window#waybar {
 
 #clock {
     color: #ffffff;
-    margin-top: 4px;
+    margin-top: 8px;
     margin-left: 4px;
     margin-right: 4px;
     padding-left: 16px;
@@ -65,11 +69,45 @@ window#waybar {
     background: #333333;
     padding-right: 16px;
     border: 2px solid #1793d1;
+}
+
+#custom-clipboard {
+    color: #ffffff;
+    font-size: 16px;
+    margin-top: 8px;
+    margin-left: 4px;
+    margin-right: 4px;
+    padding-left: 12px;
+    border-radius: 8px;
+    padding-right: 4px;
+    background: #333333;
+    border: 2px solid #1793d1;
+}
+
+#custom-clipboard:hover {
+    color: #1793d1;
+}
+
+#custom-emoji {
+    color: #ffffff;
+    font-size: 16px;
+    margin-top: 8px;
+    margin-left: 4px;
+    margin-right: 4px;
+    padding-left: 12px;
+    border-radius: 8px;
+    padding-right: 4px;
+    background: #333333;
+    border: 2px solid #1793d1;
+}
+
+#custom-emoji:hover {
+    color: #1793d1;
 }
 
 #pulseaudio {
     color: #ffffff;
-    margin-top: 4px;
+    margin-top: 8px;
     margin-left: 4px;
     margin-right: 4px;
     padding-left: 16px;
@@ -79,9 +117,13 @@ window#waybar {
     border: 2px solid #1793d1;
 }
 
+#pulseaudio:hover {
+    color: #1793d1;
+}
+
 #cpu {
     color: #ffffff;
-    margin-top: 4px;
+    margin-top: 8px;
     margin-left: 4px;
     margin-right: 4px;
     padding-left: 16px;
@@ -93,7 +135,7 @@ window#waybar {
 
 #memory {
     color: #ffffff;
-    margin-top: 4px;
+    margin-top: 8px;
     margin-left: 4px;
     margin-right: 4px;
     padding-left: 16px;
@@ -101,4 +143,21 @@ window#waybar {
     padding-right: 16px;
     background: #333333;
     border: 2px solid #1793d1;
+}
+
+#custom-exit {
+    color: #ffffff;
+    font-size: 16px;
+    margin-top: 8px;
+    margin-left: 4px;
+    margin-right: 8px;
+    padding-left: 12px;
+    border-radius: 8px;
+    padding-right: 4px;
+    background: #333333;
+    border: 2px solid #1793d1;
+}
+
+#custom-exit:hover {
+    color: #1793d1;
 }

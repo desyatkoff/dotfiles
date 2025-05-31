@@ -4,18 +4,21 @@
     "height": 40,
     "spacing": 0,
     "modules-left": [
-        "custom/menu",
+        "custom/app-launcher",
         "hyprland/workspaces"
     ],
     "modules-center": [
         "clock"
     ],
     "modules-right": [
+        "custom/clipboard",
+        "custom/emoji",
         "pulseaudio",
         "cpu",
-        "memory"
+        "memory",
+        "custom/exit"
     ],
-    "custom/menu": {
+    "custom/app-launcher": {
         "format": "󰣇 ",
         "on-click": "wofi --show drun --sort-order alphabetical",
         "tooltip": false
@@ -25,18 +28,7 @@
         "all-outputs": true,
         "on-click": "activate",
         "persistent-workspaces": {
-            "*": [
-                1,
-                2,
-                3,
-                4,
-                5,
-                6,
-                7,
-                8,
-                9,
-                10
-            ]
+            "*": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
         }
     },
     "clock": {
@@ -45,9 +37,19 @@
         "format": "{:%Y-%m-%d %H:%M}",
         "tooltip": false
     },
+    "custom/clipboard": {
+        "format": "󱉫 ",
+        "on-click": "cliphist list | wofi --dmenu --sort-order default | cliphist decode | wl-copy",
+        "tooltip": false
+    },
+    "custom/emoji": {
+        "format": "󰞅 ",
+        "on-click": "wofi-emoji",
+        "tooltip": false
+    },
     "pulseaudio": {
         "format": "{icon}Volume: {volume}%",
-        "format-muted": "󰖁  Muted ({volume}%)",
+        "format-muted": "󰖁  Volume: {volume}% (MUTED)",
         "format-icons": {
             "default": [
                 " ",
@@ -60,11 +62,16 @@
         "tooltip": false
     },
     "cpu": {
-        "format": "CPU Usage: {usage}%",
+        "format": "󰍛  CPU: {usage}%",
         "tooltip": false
     },
     "memory": {
-        "format": "RAM Usage: {used} GiB / {total} GiB",
+        "format": "   RAM: {used} GiB / {total} GiB ({percentage}%)",
         "tooltip": false
     },
+    "custom/exit": {
+        "format": " ",
+        "on-click": "hyprctl dispatch exit",
+        "tooltip": false
+    }
 }
