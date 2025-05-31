@@ -28,6 +28,7 @@ sudo pacman -S --needed \
     slurp \
     swappy \
     wl-clipboard \
+    waybar \
     wofi
 
 
@@ -69,6 +70,12 @@ if [ -d ~/.config/peaclock/ ]; then
         ~/.config/peaclock-old/
 fi
 
+if [ -d ~/.config/waybar/ ] then
+    mv -v \
+        ~/.config/waybar/ \
+        ~/.config/waybar-old/
+fi
+
 if [ -d ~/.config/wofi/ ]; then
     mv -v \
         ~/.config/wofi/ \
@@ -89,6 +96,8 @@ mkdir -v ~/.config/hypr/
 mkdir -v ~/.config/kitty/
 
 mkdir -v ~/.config/peaclock/
+
+mkdir -v ~/.config/waybar/
 
 mkdir -v ~/.config/wofi/
 
@@ -120,11 +129,17 @@ cp -v \
     ~/.config/peaclock/
 
 cp -v \
+    waybar/* \
+    ~/.config/waybar/
+
+cp -v \
     wofi/* \
     ~/.config/wofi/
 
 
 # 5. After installation
+
+hyprctl reload
 
 # Success!
 # Enjoy your new clean Hyprland setup with my personal dotfiles that I use every day
