@@ -19,11 +19,9 @@ Please, check the `install.sh` script before launching (or even manually install
     + Waybar - panel like Polybar but for Wayland instead of Xorg
         - "Application launcher" button with Arch icon (if you want to change icon, edit `waybar/config.jsonc` at 26 line)
         - Workspaces
-        - Sound volume
-        - "Clipboard" button
-        - "Emoji" button
-        - Clock: date and time
+        - Clock
         - System tray
+        - Sound volume
         - Temperature
         - CPU usage
         - RAM usage
