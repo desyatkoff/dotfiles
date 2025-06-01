@@ -16,5 +16,4 @@ allow_markup = true
 allow_images = true
 print_command = true
 display_generic = false
-always_parse_args = false
-
+always_parse_args = true

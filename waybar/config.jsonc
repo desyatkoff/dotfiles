@@ -2,18 +2,24 @@
     "layer": "top",
     "position": "top",
     "height": 40,
-    "spacing": 0,
+    "spacing": 4,
+    "margin-left": 8,
+    "margin-right": 8,
+    "margin-top": 8,
+    "margin-bottom": 0,
     "modules-left": [
         "custom/app-launcher",
-        "hyprland/workspaces"
+        "hyprland/workspaces",
+        "pulseaudio",
+        "custom/clipboard",
+        "custom/emoji"
     ],
     "modules-center": [
         "clock"
     ],
     "modules-right": [
-        "custom/clipboard",
-        "custom/emoji",
-        "pulseaudio",
+        "tray",
+        "temperature",
         "cpu",
         "memory",
         "custom/exit"
@@ -31,10 +37,11 @@
             "*": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
         }
     },
-    "clock": {
-        "interval": 1,
-        "timezone": "Asia/Yekaterinburg",
-        "format": "{:%Y-%m-%d %H:%M}",
+    "pulseaudio": {
+        "format": "󰕾  Volume: {volume}%",
+        "format-muted": "󰖁  Volume: 0%",
+        "on-click-right": "pavucontrol",
+        "on-click": "pactl -- set-sink-mute 0 toggle",
         "tooltip": false
     },
     "custom/clipboard": {
@@ -47,25 +54,29 @@
         "on-click": "wofi-emoji",
         "tooltip": false
     },
-    "pulseaudio": {
-        "format": "{icon}Volume: {volume}%",
-        "format-muted": "󰖁  Volume: {volume}% (MUTED)",
-        "format-icons": {
-            "default": [
-                " ",
-                "  ",
-                "   "
-            ]
-        },
-        "on-click-right": "pavucontrol -t 3",
-        "on-click": "pactl -- set-sink-mute 0 toggle",
+    "clock": {
+        "interval": 1,
+        "timezone": "Asia/Yekaterinburg",
+        "format": "{:%Y-%m-%d | %H:%M:%S}",
+        "tooltip": false
+    },
+    "tray": {
+        "icon-size": 16,
+        "spacing": 8
+    },
+    "temperature": {
+        "interval": 1,
+        "hwmon-path": "/sys/class/hwmon/hwmon0/temp1_input",
+        "format": " Temperature: {temperatureC}°C",
         "tooltip": false
     },
     "cpu": {
+        "interval": 1,
         "format": "󰍛  CPU: {usage}%",
         "tooltip": false
     },
     "memory": {
+        "interval": 1,
         "format": "   RAM: {used} GiB / {total} GiB ({percentage}%)",
         "tooltip": false
     },

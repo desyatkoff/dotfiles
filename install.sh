@@ -1,11 +1,11 @@
 #!/usr/bin/env bash
 
 
-##############################################
-#                                            #
-#  INSTALLER SCRIPT FOR DESYATKOFF DOTFILES  #
-#                                            #
-##############################################
+##########################################################
+#                                                        #
+#  INSTALLER SCRIPT FOR GITHUB.COM/@DESYATKOFF DOTFILES  #
+#                                                        #
+##########################################################
 
 
 # 0. Before installation
@@ -24,12 +24,12 @@ sudo pacman -S --needed \
     firefox \
     grim \
     helix \
-    hyprpaper \
     peaclock \
-    slurp \
-    swappy \
+    satty \
+    swww \
     wl-clipboard \
     waybar \
+    waypaper \
     wofi \
     wofi-emoji
 
@@ -78,6 +78,12 @@ if [ -d ~/.config/waybar/ ] then
         ~/.config/waybar-old/
 fi
 
+if [ -d ~/.config/waypaper/ ] then
+    mv -v \
+        ~/.config/waypaper/ \
+        ~/.config/waypaper-old/
+fi
+
 if [ -d ~/.config/wofi/ ]; then
     mv -v \
         ~/.config/wofi/ \
@@ -101,41 +107,47 @@ mkdir -v ~/.config/peaclock/
 
 mkdir -v ~/.config/waybar/
 
+mkdir -v ~/.config/waypaper/
+
 mkdir -v ~/.config/wofi/
 
 
 # 4. Copy the new configs
 
 cp -v \
-    cava/* \
+    ./cava/* \
     ~/.config/cava/
 
 cp -v \
-    fastfetch/* \
+    ./fastfetch/* \
     ~/.config/fastfetch/
 
 cp -v \
-    helix/* \
+    ./helix/* \
     ~/.config/helix/
 
 cp -v \
-    hypr/* \
+    ./hypr/* \
     ~/.config/hypr/
 
 cp -v \
-    kitty/* \
+    ./kitty/* \
     ~/.config/kitty/
 
 cp -v \
-    peaclock/* \
+    ./peaclock/* \
     ~/.config/peaclock/
 
 cp -v \
-    waybar/* \
+    ./waybar/* \
     ~/.config/waybar/
 
 cp -v \
-    wofi/* \
+    ./waypaper/* \
+    ~/.config/waypaper/
+
+cp -v \
+    ./wofi/* \
     ~/.config/wofi/
 
 

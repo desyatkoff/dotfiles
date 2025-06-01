@@ -1,8 +1,8 @@
 * {
     border: none;
-    font-size: 12px;
+    font-size: 14px;
     border-radius: 0;
-    font-family: "Noto Sans";
+    font-family: "Adwaita Sans";
 }
 
 window#waybar {
@@ -12,9 +12,6 @@ window#waybar {
 #custom-app-launcher {
     color: #ffffff;
     font-size: 24px;
-    margin-top: 8px;
-    margin-left: 8px;
-    margin-right: 4px;
     padding-left: 12px;
     border-radius: 8px;
     padding-right: 4px;
@@ -27,9 +24,6 @@ window#waybar {
 }
 
 #workspaces {
-    margin-top: 8px;
-    margin-left: 4px;
-    margin-right: 4px;
     border-radius: 8px;
     background: #333333;
     border: 2px solid #1793d1;
@@ -37,8 +31,7 @@ window#waybar {
 
 #workspaces button {
     color: #ffffff;
-    min-width: 20px;
-    min-height: 20px;
+    min-width: 28px;
     background: transparent;
 }
 
@@ -59,11 +52,8 @@ window#waybar {
     background: #1793d1;
 }
 
-#clock {
+#pulseaudio {
     color: #ffffff;
-    margin-top: 8px;
-    margin-left: 4px;
-    margin-right: 4px;
     padding-left: 16px;
     border-radius: 8px;
     background: #333333;
@@ -71,12 +61,13 @@ window#waybar {
     border: 2px solid #1793d1;
 }
 
+#pulseaudio:hover {
+    color: #1793d1;
+}
+
 #custom-clipboard {
     color: #ffffff;
     font-size: 16px;
-    margin-top: 8px;
-    margin-left: 4px;
-    margin-right: 4px;
     padding-left: 12px;
     border-radius: 8px;
     padding-right: 4px;
@@ -91,9 +82,6 @@ window#waybar {
 #custom-emoji {
     color: #ffffff;
     font-size: 16px;
-    margin-top: 8px;
-    margin-left: 4px;
-    margin-right: 4px;
     padding-left: 12px;
     border-radius: 8px;
     padding-right: 4px;
@@ -105,11 +93,8 @@ window#waybar {
     color: #1793d1;
 }
 
-#pulseaudio {
+#clock {
     color: #ffffff;
-    margin-top: 8px;
-    margin-left: 4px;
-    margin-right: 4px;
     padding-left: 16px;
     border-radius: 8px;
     background: #333333;
@@ -117,15 +102,26 @@ window#waybar {
     border: 2px solid #1793d1;
 }
 
-#pulseaudio:hover {
-    color: #1793d1;
+#tray {
+    color: #ffffff;
+    padding-left: 16px;
+    border-radius: 8px;
+    padding-right: 16px;
+    background: #333333;
+    border: 2px solid #1793d1;
+}
+
+#temperature {
+    color: #ffffff;
+    padding-left: 16px;
+    border-radius: 8px;
+    padding-right: 16px;
+    background: #333333;
+    border: 2px solid #1793d1;
 }
 
 #cpu {
     color: #ffffff;
-    margin-top: 8px;
-    margin-left: 4px;
-    margin-right: 4px;
     padding-left: 16px;
     border-radius: 8px;
     padding-right: 16px;
@@ -135,9 +131,6 @@ window#waybar {
 
 #memory {
     color: #ffffff;
-    margin-top: 8px;
-    margin-left: 4px;
-    margin-right: 4px;
     padding-left: 16px;
     border-radius: 8px;
     padding-right: 16px;
@@ -148,9 +141,6 @@ window#waybar {
 #custom-exit {
     color: #ffffff;
     font-size: 16px;
-    margin-top: 8px;
-    margin-left: 4px;
-    margin-right: 8px;
     padding-left: 12px;
     border-radius: 8px;
     padding-right: 4px;

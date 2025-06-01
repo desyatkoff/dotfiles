@@ -101,13 +101,13 @@
         },
         {
             "type": "memory",
-            "key": "│ ├  RAM         ",
+            "key": "│ ├  RAM Usage   ",
             "keyColor": "36",
             "format": "{1} / {2}"
         },
         {
             "type": "swap",
-            "key": "│ ├󰓡  Swap        ",
+            "key": "│ ├󰓡  Swap Usage  ",
             "keyColor": "36",
             "format": "{1} / {2}"
         },
