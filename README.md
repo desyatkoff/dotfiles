@@ -17,7 +17,7 @@ Please, check the `install.sh` script before launching (or even manually install
     + Kitty - terminal
     + Peaclock - clock with text-based user interface
     + Waybar - panel like Polybar but for Wayland instead of Xorg
-        - "Application launcher" button with Arch icon (if you want to change icon, edit `~/.config/waybar/config.jsonc` at 28 line)
+        - "Application launcher" button with Arch icon (if you want to change icon, edit `waybar/config.jsonc` at 28 line)
         - Workspaces
         - Sound volume
         - "Clipboard" button
