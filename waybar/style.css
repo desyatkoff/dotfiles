@@ -1,6 +1,6 @@
 * {
     border: none;
-    font-size: 14px;
+    font-size: 16px;
     border-radius: 0;
     font-family: "Adwaita Sans";
 }
@@ -52,47 +52,6 @@ window#waybar {
     background: #1793d1;
 }
 
-#pulseaudio {
-    color: #ffffff;
-    padding-left: 16px;
-    border-radius: 8px;
-    background: #333333;
-    padding-right: 16px;
-    border: 2px solid #1793d1;
-}
-
-#pulseaudio:hover {
-    color: #1793d1;
-}
-
-#custom-clipboard {
-    color: #ffffff;
-    font-size: 16px;
-    padding-left: 12px;
-    border-radius: 8px;
-    padding-right: 4px;
-    background: #333333;
-    border: 2px solid #1793d1;
-}
-
-#custom-clipboard:hover {
-    color: #1793d1;
-}
-
-#custom-emoji {
-    color: #ffffff;
-    font-size: 16px;
-    padding-left: 12px;
-    border-radius: 8px;
-    padding-right: 4px;
-    background: #333333;
-    border: 2px solid #1793d1;
-}
-
-#custom-emoji:hover {
-    color: #1793d1;
-}
-
 #clock {
     color: #ffffff;
     padding-left: 16px;
@@ -109,6 +68,19 @@ window#waybar {
     padding-right: 16px;
     background: #333333;
     border: 2px solid #1793d1;
+}
+
+#pulseaudio {
+    color: #ffffff;
+    padding-left: 16px;
+    border-radius: 8px;
+    background: #333333;
+    padding-right: 16px;
+    border: 2px solid #1793d1;
+}
+
+#pulseaudio:hover {
+    color: #1793d1;
 }
 
 #temperature {
@@ -140,7 +112,6 @@ window#waybar {
 
 #custom-exit {
     color: #ffffff;
-    font-size: 16px;
     padding-left: 12px;
     border-radius: 8px;
     padding-right: 4px;

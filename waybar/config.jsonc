@@ -9,16 +9,14 @@
     "margin-bottom": 0,
     "modules-left": [
         "custom/app-launcher",
-        "hyprland/workspaces",
-        "pulseaudio",
-        "custom/clipboard",
-        "custom/emoji"
+        "hyprland/workspaces"
     ],
     "modules-center": [
         "clock"
     ],
     "modules-right": [
         "tray",
+        "pulseaudio",
         "temperature",
         "cpu",
         "memory",
@@ -37,47 +35,37 @@
             "*": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
         }
     },
-    "pulseaudio": {
-        "format": "󰕾  Volume: {volume}%",
-        "format-muted": "󰖁  Volume: 0%",
-        "on-click-right": "pavucontrol",
-        "on-click": "pactl -- set-sink-mute 0 toggle",
-        "tooltip": false
-    },
-    "custom/clipboard": {
-        "format": "󱉫 ",
-        "on-click": "cliphist list | wofi --dmenu --sort-order default | cliphist decode | wl-copy",
-        "tooltip": false
-    },
-    "custom/emoji": {
-        "format": "󰞅 ",
-        "on-click": "wofi-emoji",
-        "tooltip": false
-    },
     "clock": {
         "interval": 1,
         "timezone": "Asia/Yekaterinburg",
-        "format": "{:%Y-%m-%d | %H:%M:%S}",
+        "format": "󰥔  {:%H:%M:%S, %Y-%m-%d}",
         "tooltip": false
     },
     "tray": {
         "icon-size": 16,
         "spacing": 8
     },
+    "pulseaudio": {
+        "format": "󰕾  {volume}%",
+        "format-muted": "󰖁  0%",
+        "on-click-right": "pavucontrol",
+        "on-click": "pactl -- set-sink-mute 0 toggle",
+        "tooltip": false
+    },
     "temperature": {
         "interval": 1,
         "hwmon-path": "/sys/class/hwmon/hwmon0/temp1_input",
-        "format": " Temperature: {temperatureC}°C",
+        "format": "  {temperatureC}°C",
         "tooltip": false
     },
     "cpu": {
         "interval": 1,
-        "format": "󰍛  CPU: {usage}%",
+        "format": "󰍛  {usage}%",
         "tooltip": false
     },
     "memory": {
         "interval": 1,
-        "format": "   RAM: {used} GiB / {total} GiB ({percentage}%)",
+        "format": "   {used} GiB / {total} GiB",
         "tooltip": false
     },
     "custom/exit": {
