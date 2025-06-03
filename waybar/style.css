@@ -5,7 +5,7 @@
     font-family: "Adwaita Sans";
 }
 
-window#waybar {
+#waybar {
     background: transparent;
 }
 
@@ -54,28 +54,28 @@ window#waybar {
 
 #clock {
     color: #ffffff;
-    padding-left: 16px;
+    padding-left: 12px;
     border-radius: 8px;
     background: #333333;
-    padding-right: 16px;
+    padding-right: 12px;
     border: 2px solid #1793d1;
 }
 
 #tray {
     color: #ffffff;
-    padding-left: 16px;
+    padding-left: 12px;
     border-radius: 8px;
-    padding-right: 16px;
+    padding-right: 12px;
     background: #333333;
     border: 2px solid #1793d1;
 }
 
 #pulseaudio {
     color: #ffffff;
-    padding-left: 16px;
+    padding-left: 12px;
     border-radius: 8px;
     background: #333333;
-    padding-right: 16px;
+    padding-right: 12px;
     border: 2px solid #1793d1;
 }
 
@@ -85,32 +85,32 @@ window#waybar {
 
 #temperature {
     color: #ffffff;
-    padding-left: 16px;
+    padding-left: 12px;
     border-radius: 8px;
-    padding-right: 16px;
+    padding-right: 12px;
     background: #333333;
     border: 2px solid #1793d1;
 }
 
 #cpu {
     color: #ffffff;
-    padding-left: 16px;
+    padding-left: 12px;
     border-radius: 8px;
-    padding-right: 16px;
+    padding-right: 12px;
     background: #333333;
     border: 2px solid #1793d1;
 }
 
 #memory {
     color: #ffffff;
-    padding-left: 16px;
+    padding-left: 12px;
     border-radius: 8px;
-    padding-right: 16px;
+    padding-right: 12px;
     background: #333333;
     border: 2px solid #1793d1;
 }
 
-#custom-exit {
+#custom-power-menu {
     color: #ffffff;
     padding-left: 12px;
     border-radius: 8px;
@@ -119,6 +119,6 @@ window#waybar {
     border: 2px solid #1793d1;
 }
 
-#custom-exit:hover {
+#custom-power-menu:hover {
     color: #1793d1;
 }

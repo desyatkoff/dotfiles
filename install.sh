@@ -24,6 +24,7 @@ sudo pacman -S --needed \
     firefox \
     grim \
     helix \
+    hyprlock \
     peaclock \
     satty \
     swww \
@@ -90,6 +91,11 @@ if [ -d ~/.config/wofi/ ]; then
         ~/.config/wofi-old/
 fi
 
+if [ -f ~/.bash_profile ]; then
+    mv -v \
+        ~/.bash_profile \
+        ~/.bash_profile-old
+fi
 
 # 3. Create special directories for the new configs
 
@@ -149,6 +155,10 @@ cp -v \
 cp -v \
     ./wofi/* \
     ~/.config/wofi/
+
+cp -v \
+    ./.bash_profile \
+    ~/.bash_profile
 
 
 # 5. After installation

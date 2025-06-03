@@ -20,7 +20,7 @@
         "temperature",
         "cpu",
         "memory",
-        "custom/exit"
+        "custom/power-menu"
     ],
     "custom/app-launcher": {
         "format": "󰣇 ",
@@ -68,9 +68,9 @@
         "format": "   {used} GiB / {total} GiB",
         "tooltip": false
     },
-    "custom/exit": {
+    "custom/power-menu": {
         "format": " ",
-        "on-click": "hyprctl dispatch exit",
+        "on-click": "sh ~/.config/wofi/scripts/power_menu.sh",
         "tooltip": false
     }
 }
