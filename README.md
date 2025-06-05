@@ -23,6 +23,7 @@ Please, check the `install.sh` script before launching it
     + Hypr things (Hyprland, Hyprlock)
     + Kitty
     + Peaclock
+    + Superfile
     + Waybar
         - Application launcher
         - Workspaces
@@ -43,7 +44,7 @@ Please, check the `install.sh` script before launching it
     + `Super` + `Q` -> Close current window
     + `Super` + `L` -> Lock
     + `Super` + `X` -> Power menu
-    + `Super` + `E` -> Launch Dolphin
+    + `Super` + `E` -> Launch Superfile
     + `Super` + `B` -> Launch Firefox
     + `Super` + `F` -> Toggle floating mode
     + `Super` + `SHIFT` + `F` -> Toggle fullscreen mode

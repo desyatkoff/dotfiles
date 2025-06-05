@@ -19,7 +19,6 @@
 sudo pacman -S --needed \
     cava \
     cliphist \
-    dolphin \
     fastfetch \
     firefox \
     grim \
@@ -27,6 +26,7 @@ sudo pacman -S --needed \
     hyprlock \
     peaclock \
     satty \
+    superfile \
     swww \
     wl-clipboard \
     waybar \
@@ -73,6 +73,12 @@ if [ -d ~/.config/peaclock/ ]; then
         ~/.config/peaclock-old/
 fi
 
+if [ -d ~/.config/superfile/ ]; then
+    mv -v \
+        ~/.config/superfile/
+        ~/.config/superfile-old/
+fi
+
 if [ -d ~/.config/waybar/ ] then
     mv -v \
         ~/.config/waybar/ \
@@ -111,6 +117,8 @@ mkdir -v ~/.config/kitty/
 
 mkdir -v ~/.config/peaclock/
 
+mkdir -v ~/.config/superfile/
+
 mkdir -v ~/.config/waybar/
 
 mkdir -v ~/.config/waypaper/
@@ -143,6 +151,10 @@ cp -v \
 cp -v \
     ./peaclock/* \
     ~/.config/peaclock/
+
+cp -v \
+    ./superfile/* \
+    ~/.config/superfile/
 
 cp -v \
     ./waybar/* \

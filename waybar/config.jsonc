@@ -39,7 +39,7 @@
         "interval": 1,
         "timezone": "Asia/Yekaterinburg",
         "format": "󰥔  {:%H:%M:%S, %Y-%m-%d}",
-        "tooltip": false
+        "tooltip-format": "{calendar}"
     },
     "tray": {
         "icon-size": 16,

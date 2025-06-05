@@ -1,8 +1,19 @@
 * {
     border: none;
     font-size: 16px;
+    transition: none;
     border-radius: 0;
-    font-family: "Adwaita Sans";
+    font-weight: normal;
+}
+
+tooltip {
+    color: #ffffff;
+    padding-left: 12px;
+    border-radius: 8px;
+    background: #333333;
+    padding-right: 12px;
+    border: 2px solid #1793d1;
+    font-family: "Adwaita Mono";
 }
 
 #waybar {
@@ -17,6 +28,7 @@
     padding-right: 4px;
     background: #333333;
     border: 2px solid #1793d1;
+    font-family: "Adwaita Sans";
 }
 
 #custom-app-launcher:hover {
@@ -31,8 +43,9 @@
 
 #workspaces button {
     color: #ffffff;
-    min-width: 28px;
+    min-width: 20px;
     background: transparent;
+    font-family: "Adwaita Sans";
 }
 
 #workspaces button.persistent {
@@ -59,6 +72,7 @@
     background: #333333;
     padding-right: 12px;
     border: 2px solid #1793d1;
+    font-family: "Adwaita Sans";
 }
 
 #tray {
@@ -68,6 +82,7 @@
     padding-right: 12px;
     background: #333333;
     border: 2px solid #1793d1;
+    font-family: "Adwaita Sans";
 }
 
 #pulseaudio {
@@ -77,6 +92,7 @@
     background: #333333;
     padding-right: 12px;
     border: 2px solid #1793d1;
+    font-family: "Adwaita Sans";
 }
 
 #pulseaudio:hover {
@@ -90,6 +106,7 @@
     padding-right: 12px;
     background: #333333;
     border: 2px solid #1793d1;
+    font-family: "Adwaita Sans";
 }
 
 #cpu {
@@ -99,6 +116,7 @@
     padding-right: 12px;
     background: #333333;
     border: 2px solid #1793d1;
+    font-family: "Adwaita Sans";
 }
 
 #memory {
@@ -108,6 +126,7 @@
     padding-right: 12px;
     background: #333333;
     border: 2px solid #1793d1;
+    font-family: "Adwaita Sans";
 }
 
 #custom-power-menu {
@@ -117,6 +136,7 @@
     padding-right: 4px;
     background: #333333;
     border: 2px solid #1793d1;
+    font-family: "Adwaita Sans";
 }
 
 #custom-power-menu:hover {
