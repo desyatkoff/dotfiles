@@ -1,5 +1,5 @@
 * {
-    color: #e6e6e6;
+    color: #cdd6f4;
     font-style: normal;
     background: transparent;
     font-family: "Adwaita Sans"; 
@@ -9,8 +9,8 @@
     margin: 4px;
     padding: 4px;
     border-radius: 8px;
-    background: rgba(13, 13, 13, 0.8);
-    border: 2px solid #1793d1;
+    background: #1e1e2e;
+    border: 2px solid #89b4fa;
 }
 
 #input {
@@ -33,7 +33,7 @@
 }
 
 #entry:selected {
-    background-color: rgba(51, 51, 51, 0.4);
+    background-color: #313244;
 }
 
 #text {

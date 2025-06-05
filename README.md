@@ -15,6 +15,7 @@ Please, check the `install.sh` script before launching it
 
 * Simple & lightweight
 * Smooth animations
+* Beautiful pastel color palette
 * Modular structure (all settings are split into many different config files)
 * Configurations for:
     + Cava

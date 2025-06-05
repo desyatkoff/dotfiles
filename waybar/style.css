@@ -7,12 +7,12 @@
 }
 
 tooltip {
-    color: #ffffff;
+    color: #cdd6f4;
     padding-left: 12px;
     border-radius: 8px;
-    background: #333333;
+    background: #1e1e2e;
     padding-right: 12px;
-    border: 2px solid #1793d1;
+    border: 2px solid #11111b;
     font-family: "Adwaita Mono";
 }
 
@@ -21,124 +21,117 @@ tooltip {
 }
 
 #custom-app-launcher {
-    color: #ffffff;
+    color: #89b4fa;
     font-size: 24px;
     padding-left: 12px;
     border-radius: 8px;
     padding-right: 4px;
-    background: #333333;
-    border: 2px solid #1793d1;
+    background: #1e1e2e;
+    border: 2px solid #89b4fa;
     font-family: "Adwaita Sans";
 }
 
 #custom-app-launcher:hover {
-    background: #1793d1;
+    color: #cdd6f4;
+    background: #89b4fa;
 }
 
 #workspaces {
     border-radius: 8px;
-    background: #333333;
-    border: 2px solid #1793d1;
+    background: #1e1e2e;
+    border: 2px solid #74c7ec;
 }
 
 #workspaces button {
-    color: #ffffff;
+    color: #cdd6f4;
     min-width: 20px;
     background: transparent;
     font-family: "Adwaita Sans";
 }
 
 #workspaces button.persistent {
-    color: #808080;
+    color: #a6adc8;
 }
 
 #workspaces button:hover {
-    color: #1793d1;
+    color: #74c7ec;
     box-shadow: inherit;
     text-shadow: inherit;
     border-radius: inherit;
 }
 
 #workspaces button.active {
-    color: #ffffff;
-    border-radius: 4px;
-    background: #1793d1;
+    color: #74c7ec;
+    border-radius: 8px;
+    background: #313244;
 }
 
 #clock {
-    color: #ffffff;
+    color: #89dceb;
     padding-left: 12px;
     border-radius: 8px;
-    background: #333333;
+    background: #1e1e2e;
     padding-right: 12px;
-    border: 2px solid #1793d1;
+    border: 2px solid #89dceb;
     font-family: "Adwaita Sans";
 }
 
 #tray {
-    color: #ffffff;
+    color: #94e2d5;
     padding-left: 12px;
     border-radius: 8px;
     padding-right: 12px;
-    background: #333333;
-    border: 2px solid #1793d1;
+    background: #1e1e2e;
+    border: 2px solid #94e2d5;
     font-family: "Adwaita Sans";
 }
 
 #pulseaudio {
-    color: #ffffff;
+    color: #a6e3a1;
     padding-left: 12px;
     border-radius: 8px;
-    background: #333333;
+    background: #1e1e2e;
     padding-right: 12px;
-    border: 2px solid #1793d1;
+    border: 2px solid #a6e3a1;
     font-family: "Adwaita Sans";
 }
 
-#pulseaudio:hover {
-    color: #1793d1;
-}
-
 #temperature {
-    color: #ffffff;
+    color: #f9e2af;
     padding-left: 12px;
     border-radius: 8px;
     padding-right: 12px;
-    background: #333333;
-    border: 2px solid #1793d1;
+    background: #1e1e2e;
+    border: 2px solid #f9e2af;
     font-family: "Adwaita Sans";
 }
 
 #cpu {
-    color: #ffffff;
+    color: #fab387;
     padding-left: 12px;
     border-radius: 8px;
     padding-right: 12px;
-    background: #333333;
-    border: 2px solid #1793d1;
+    background: #1e1e2e;
+    border: 2px solid #fab387;
     font-family: "Adwaita Sans";
 }
 
 #memory {
-    color: #ffffff;
+    color: #eba0ac;
     padding-left: 12px;
     border-radius: 8px;
     padding-right: 12px;
-    background: #333333;
-    border: 2px solid #1793d1;
+    background: #1e1e2e;
+    border: 2px solid #eba0ac;
     font-family: "Adwaita Sans";
 }
 
 #custom-power-menu {
-    color: #ffffff;
+    color: #f38ba8;
     padding-left: 12px;
     border-radius: 8px;
     padding-right: 4px;
-    background: #333333;
-    border: 2px solid #1793d1;
+    background: #1e1e2e;
+    border: 2px solid #f38ba8;
     font-family: "Adwaita Sans";
-}
-
-#custom-power-menu:hover {
-    color: #1793d1;
 }
