@@ -1,11 +1,11 @@
 #!/usr/bin/env bash
 
 
-##########################################################
-#                                                        #
-#  INSTALLER SCRIPT FOR GITHUB.COM/@DESYATKOFF DOTFILES  #
-#                                                        #
-##########################################################
+#########################################################
+#                                                       #
+#  INSTALLER SCRIPT FOR GITHUB.COM/DESYATKOFF DOTFILES  #
+#                                                       #
+#########################################################
 
 
 # 0. Before installation
@@ -24,6 +24,7 @@ sudo pacman -S --needed \
     grim \
     helix \
     hyprlock \
+    hyprpicker \
     peaclock \
     satty \
     superfile \
@@ -125,6 +126,10 @@ mkdir -v ~/.config/waypaper/
 
 mkdir -v ~/.config/wofi/
 
+mkdir -v ~/Wallpapers/
+
+sudo mkdir -v -p /etc/systemd/system/getty@tty1.service.d/
+
 
 # 4. Copy the new configs
 
@@ -169,13 +174,21 @@ cp -v \
     ~/.config/wofi/
 
 cp -v \
+    ./Wallpapers/* \
+    ~/Wallpapers/
+
+cp -v \
     ./.bash_profile \
     ~/.bash_profile
+
+sudo cp -v \
+    ./autologin.conf \
+    /etc/systemd/system/getty@tty1.service.d/
 
 
 # 5. After installation
 
-hyprctl reload
+systemctl reboot
 
 # Success!
 # Enjoy your new clean Hyprland setup with my personal dotfiles that I use every day

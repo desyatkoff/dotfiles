@@ -8,10 +8,8 @@
 
 tooltip {
     color: #cdd6f4;
-    padding-left: 12px;
     border-radius: 8px;
     background: #1e1e2e;
-    padding-right: 12px;
     border: 2px solid #11111b;
     font-family: "Adwaita Mono";
 }
@@ -22,18 +20,17 @@ tooltip {
 
 #custom-app-launcher {
     color: #89b4fa;
+    min-width: 32px;
     font-size: 24px;
-    padding-left: 12px;
+    padding-left: 8px;
     border-radius: 8px;
-    padding-right: 4px;
     background: #1e1e2e;
     border: 2px solid #89b4fa;
     font-family: "Adwaita Sans";
 }
 
 #custom-app-launcher:hover {
-    color: #cdd6f4;
-    background: #89b4fa;
+    background: #313244;
 }
 
 #workspaces {
@@ -44,7 +41,7 @@ tooltip {
 
 #workspaces button {
     color: #cdd6f4;
-    min-width: 20px;
+    min-width: 16px;
     background: transparent;
     font-family: "Adwaita Sans";
 }
@@ -68,19 +65,19 @@ tooltip {
 
 #clock {
     color: #89dceb;
-    padding-left: 12px;
+    min-width: 250px;
     border-radius: 8px;
     background: #1e1e2e;
-    padding-right: 12px;
     border: 2px solid #89dceb;
     font-family: "Adwaita Sans";
 }
 
 #tray {
     color: #94e2d5;
-    padding-left: 12px;
+    min-width: 32px;
+    padding-left: 8px;
     border-radius: 8px;
-    padding-right: 12px;
+    padding-right: 8px;
     background: #1e1e2e;
     border: 2px solid #94e2d5;
     font-family: "Adwaita Sans";
@@ -88,19 +85,21 @@ tooltip {
 
 #pulseaudio {
     color: #a6e3a1;
-    padding-left: 12px;
+    min-width: 100px;
     border-radius: 8px;
     background: #1e1e2e;
-    padding-right: 12px;
     border: 2px solid #a6e3a1;
     font-family: "Adwaita Sans";
 }
 
+#pulseaudio:hover {
+    background: #313244;
+}
+
 #temperature {
     color: #f9e2af;
-    padding-left: 12px;
+    min-width: 100px;
     border-radius: 8px;
-    padding-right: 12px;
     background: #1e1e2e;
     border: 2px solid #f9e2af;
     font-family: "Adwaita Sans";
@@ -108,9 +107,8 @@ tooltip {
 
 #cpu {
     color: #fab387;
-    padding-left: 12px;
+    min-width: 100px;
     border-radius: 8px;
-    padding-right: 12px;
     background: #1e1e2e;
     border: 2px solid #fab387;
     font-family: "Adwaita Sans";
@@ -118,9 +116,8 @@ tooltip {
 
 #memory {
     color: #eba0ac;
-    padding-left: 12px;
+    min-width: 200px;
     border-radius: 8px;
-    padding-right: 12px;
     background: #1e1e2e;
     border: 2px solid #eba0ac;
     font-family: "Adwaita Sans";
@@ -128,10 +125,14 @@ tooltip {
 
 #custom-power-menu {
     color: #f38ba8;
-    padding-left: 12px;
+    min-width: 32px;
+    padding-left: 8px;
     border-radius: 8px;
-    padding-right: 4px;
     background: #1e1e2e;
     border: 2px solid #f38ba8;
     font-family: "Adwaita Sans";
+}
+
+#custom-power-menu:hover {
+    background: #313244;
 }

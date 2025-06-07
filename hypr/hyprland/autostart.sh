@@ -13,5 +13,5 @@ while pgrep -x hyprlock >/dev/null; do
 done
 
 swww-daemon &
-swww img --resize=fit --transition-type=center --transition-step=30 --transition-duration=1 --transition-fps=60 ~/Wallpapers/default.png &
+sh ~/Wallpapers/dynamic_wallpapers.sh &
 sleep 1 && waybar &
