@@ -4,12 +4,14 @@
 
 
 MORNING=6
-DAY=12
+DAY=10
 EVENING=18
-NIGHT=0
+NIGHT=22
 
-while true; do
-    current_hour=$(date +%H)
+period="day"
+
+update_period() {
+    local current_hour=$(date +%H)
 
     if [ $current_hour -ge $MORNING ] && [ $current_hour -lt $DAY ]; then
         period="morning"
@@ -20,8 +22,25 @@ while true; do
     elif [ $current_hour -ge $NIGHT ] || [ $current_hour -lt $MORNING ]; then
         period="night"
     fi
+}
 
-    swww img --resize=fit --transition-type=center --transition-step=30 --transition-duration=1 --transition-fps=60 "$HOME/Wallpapers/$period.png"
+if ! pgrep -x "swww-daemon" > /dev/null; then
+    swww-daemon &
+    sleep 1
+fi
 
-    sleep 3600
+update_period
+
+swww img --transition-type=center --transition-step=30 --transition-duration=1 --transition-fps=60 "$HOME/Wallpapers/$period.png"
+
+while true; do
+    old_period=$period
+
+    update_period
+
+    if [ "$old_period" != "$period" ]; then
+        swww img --transition-type=fade --transition-step=60 --transition-duration=10 --transition-fps=60 "$HOME/Wallpapers/$period.png"
+    fi
+
+    sleep $(( (3600 - $(date +%M) * 60 - $(date +%S)) ))
 done

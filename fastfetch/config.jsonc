@@ -23,7 +23,7 @@
         {
             "type": "custom",
             "format": "╭{$1}╮",
-            "outputColor": "36"
+            "outputColor": "34"
         },
         {
             "type": "title",
@@ -33,7 +33,7 @@
         {
             "type": "custom",
             "format": "╰{$1}╯",
-            "outputColor": "36"
+            "outputColor": "34"
         },
         "break",
         {
@@ -44,7 +44,7 @@
         {
             "type": "custom",
             "format": "╭{$1}╮",
-            "outputColor": "36"
+            "outputColor": "34"
         },
         {
             "type": "custom",
@@ -54,12 +54,12 @@
         {
             "type": "custom",
             "format": "╰{$1}╯",
-            "outputColor": "36"
+            "outputColor": "34"
         },
         {
             "type": "custom",
             "format": "╭{$1}╮",
-            "outputColor": "36"
+            "outputColor": "34"
         },        {
             "type": "os",
             "key": "    OS          ",
@@ -116,7 +116,7 @@
         {
             "type": "custom",
             "format": "╰{$1}╯",
-            "outputColor": "36"
+            "outputColor": "34"
         }
     ]
 }

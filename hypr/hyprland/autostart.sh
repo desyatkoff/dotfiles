@@ -12,6 +12,5 @@ while pgrep -x hyprlock >/dev/null; do
     sleep 0.1
 done
 
-swww-daemon &
 sh ~/Wallpapers/dynamic_wallpapers.sh &
 sleep 1 && waybar &

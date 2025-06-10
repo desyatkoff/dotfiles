@@ -11,7 +11,7 @@ shell = [
     "-c"
 ]
 line-number = "absolute"
-cursorline = true
+cursorline = false
 cursorcolumn = false
 continue-comments = true
 gutters = [

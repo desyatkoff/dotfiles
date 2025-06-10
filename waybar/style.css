@@ -20,7 +20,7 @@ tooltip {
 
 #custom-app-launcher {
     color: #89b4fa;
-    min-width: 32px;
+    min-width: 24px;
     font-size: 24px;
     padding-left: 8px;
     border-radius: 8px;
@@ -41,7 +41,7 @@ tooltip {
 
 #workspaces button {
     color: #cdd6f4;
-    min-width: 16px;
+    min-width: 14px;
     background: transparent;
     font-family: "Adwaita Sans";
 }
@@ -65,7 +65,7 @@ tooltip {
 
 #clock {
     color: #89dceb;
-    min-width: 250px;
+    min-width: 256px;
     border-radius: 8px;
     background: #1e1e2e;
     border: 2px solid #89dceb;
@@ -75,9 +75,9 @@ tooltip {
 #tray {
     color: #94e2d5;
     min-width: 32px;
-    padding-left: 8px;
+    padding-left: 4px;
     border-radius: 8px;
-    padding-right: 8px;
+    padding-right: 4px;
     background: #1e1e2e;
     border: 2px solid #94e2d5;
     font-family: "Adwaita Sans";
@@ -85,7 +85,7 @@ tooltip {
 
 #pulseaudio {
     color: #a6e3a1;
-    min-width: 100px;
+    min-width: 80px;
     border-radius: 8px;
     background: #1e1e2e;
     border: 2px solid #a6e3a1;
@@ -98,7 +98,7 @@ tooltip {
 
 #temperature {
     color: #f9e2af;
-    min-width: 100px;
+    min-width: 80px;
     border-radius: 8px;
     background: #1e1e2e;
     border: 2px solid #f9e2af;
@@ -107,7 +107,7 @@ tooltip {
 
 #cpu {
     color: #fab387;
-    min-width: 100px;
+    min-width: 80px;
     border-radius: 8px;
     background: #1e1e2e;
     border: 2px solid #fab387;
@@ -116,7 +116,7 @@ tooltip {
 
 #memory {
     color: #eba0ac;
-    min-width: 200px;
+    min-width: 192px;
     border-radius: 8px;
     background: #1e1e2e;
     border: 2px solid #eba0ac;
@@ -125,7 +125,7 @@ tooltip {
 
 #custom-power-menu {
     color: #f38ba8;
-    min-width: 32px;
+    min-width: 24px;
     padding-left: 8px;
     border-radius: 8px;
     background: #1e1e2e;

@@ -104,6 +104,7 @@ if [ -f ~/.bash_profile ]; then
         ~/.bash_profile-old
 fi
 
+
 # 3. Create special directories for the new configs
 
 mkdir -v ~/.config/cava/
@@ -180,6 +181,7 @@ cp -v \
 cp -v \
     ./.bash_profile \
     ~/.bash_profile
+
 
 sudo cp -v \
     ./autologin.conf \
