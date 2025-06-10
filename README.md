@@ -1,54 +1,67 @@
 # Dotfiles
 
-![](preview.png)
+<img
+    src="Demo/preview.png"
+    align="right"
+    width="480"
+/>
+
+<br />
+
+* Operating system: `Arch Linux`
+* Fetch: `Fastfetch`
+* Editor: `Helix`
+* Window compositor: `Hyprland`
+* Terminal: `Kitty`
+* Shell: `Zsh`
+* File manager: `Superfile`
+* Bar: `Waybar`
+* Menu: `Wofi`
+
+<br />
+
 
 ## Description
 
-This repository stores my dotfiles that I personally use. Please, check the `install.sh` script before launching it
+This repository stores my dotfiles that I personally use. Beautiful and useful! Please, check the [install.sh](install.sh) script before launching it
+
 
 ## Features
 
 * Simple & lightweight
 * Smooth animations
-* Beautiful pastel color palette - Catppuccin
-* Modular structure (all settings are split into many different config files)
-* Configurations for:
-    + Cava
-    + Fastfetch
-    + Helix
-    + Hyprland + Hyprlock
-    + Kitty
-    + Peaclock
-    + Superfile
-    + Waybar
-        - Application launcher
-        - Workspaces
-        - Clock
-        - System tray
-        - Sound volume
-        - Temperature
-        - CPU usage
-        - RAM usage
-        - Power menu button
-            - Shutdown
-            - Reboot
-            - Lock
-    + SWWW + Waypaper
-    + Wofi
-* Useful shortcuts:
+* Catppuccin color palette
+* Modular structure
+* Useful shortcuts
+
+
+## Demo Gallery
+
+![](Demo/1.png)
+![](Demo/2.png)
+![](Demo/3.png)
+
+
+## Shortcuts
+
+* The most basic:
     + `Super` + `Enter` -> Launch Kitty
-    + `Super` + `Q` -> Close current window
+    + `Super` + `Q` -> Close window
+    + `Super` + `Shift` + `Q` -> Close window (force) 
     + `Super` + `L` -> Lock
     + `Super` + `X` -> Power menu
+    + `Super` + `Shift` + `X` -> Quit Hyprland and go to TTY
     + `Super` + `E` -> Launch Superfile
     + `Super` + `B` -> Launch Firefox
+    + `Super` + `Shift` + `B` -> Launch Firefox (private window)
     + `Super` + `F` -> Toggle floating mode
     + `Super` + `SHIFT` + `F` -> Toggle fullscreen mode
     + `Super` + `R` -> Open application launcher
     + `Super` + `V` -> Open clipboard
     + `Super` + `.` -> Open emoji picker
+    + `Super` + `P` -> Launch screen color picker
+    + `Super` + `J` -> Toggle split mode
     + `Super` + `W` -> Toggle Waybar
     + `Print Screen` -> Take a screenshot
     + `Shift` + `Print Screen` -> Take a screenshot and edit before saving (crop, draw, blur, etc...)
-    + And much more convenient things. Other shortcuts you can see in `hypr/hyprland/binds.conf`
-* Also the best feature is... The excellence of minimalistic Arch Linux Hyprland :)
+    + See [hypr/hyprland/binds.conf](hypr/hyprland/binds.conf) for more
