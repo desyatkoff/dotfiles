@@ -35,13 +35,6 @@ This repository stores my dotfiles that I personally use. Beautiful and useful! 
 * Useful shortcuts
 
 
-## Demo Gallery
-
-![](assets/demo/1.png)
-![](assets/demo/2.png)
-![](assets/demo/3.png)
-
-
 ## Shortcuts
 
 * The most basic:
@@ -65,3 +58,10 @@ This repository stores my dotfiles that I personally use. Beautiful and useful! 
     + `Print Screen` -> Take a screenshot
     + `Shift` + `Print Screen` -> Take a screenshot and edit before saving (crop, draw, blur, etc...)
     + See [hypr/hyprland/binds.conf](hypr/hyprland/binds.conf) for more
+
+
+## Demo
+
+![](assets/demo/1.png)
+![](assets/demo/2.png)
+![](assets/demo/3.png)
