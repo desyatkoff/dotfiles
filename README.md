@@ -1,7 +1,7 @@
 # Dotfiles
 
 <img
-    src="Demo/preview.png"
+    src="assets/demo/preview.png"
     align="right"
     width="480"
 />
@@ -37,9 +37,9 @@ This repository stores my dotfiles that I personally use. Beautiful and useful! 
 
 ## Demo Gallery
 
-![](Demo/1.png)
-![](Demo/2.png)
-![](Demo/3.png)
+![](assets/demo/1.png)
+![](assets/demo/2.png)
+![](assets/demo/3.png)
 
 
 ## Shortcuts

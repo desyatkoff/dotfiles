@@ -75,9 +75,9 @@ tooltip {
 #tray {
     color: #94e2d5;
     min-width: 32px;
-    padding-left: 4px;
+    padding-left: 8px;
     border-radius: 8px;
-    padding-right: 4px;
+    padding-right: 8px;
     background: #1e1e2e;
     border: 2px solid #94e2d5;
     font-family: "Adwaita Sans";
