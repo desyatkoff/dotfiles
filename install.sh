@@ -188,14 +188,14 @@ else
         exit 1
     fi
 
-    sudo -v
-
     if [[ ! -d ".git" && ! -f "install.sh" ]]; then
-        if ! command -v git &>/dev/null; then
-            sudo pacman -S git
-        fi
+        if [[ ! -d "dotfiles" ]]; then
+            if ! command -v git &>/dev/null; then
+                sudo pacman -S git
+            fi
 
-        git clone https://github.com/desyatkoff/dotfiles.git
+            git clone https://github.com/desyatkoff/dotfiles.git
+        fi
 
         cd dotfiles/
     fi
@@ -270,10 +270,6 @@ log_info "Copying configs"
 
 wait_dots
 
-mkdir -v ~/Pictures/
-
-mkdir -v ~/.config/
-
 for thing in "${HOME_STUFF[@]}"; do
     cp -rv "$CLONE_DIR/$thing" "$HOME/$thing" 2>/dev/null || true
 done
@@ -296,7 +292,7 @@ cp -rv \
     "$CLONE_DIR/fast-syntax-highlighting/" \
     "$HOME/.oh-my-zsh/custom/plugins/fast-syntax-highlighting/"
 
-zsh fast-theme XDG:catppuccin-mocha
+zsh fast-theme -v XDG:catppuccin-mocha || true
 
 git clone https://github.com/Aloxaf/fzf-tab.git "$CLONE_DIR/fzf-tab/"
 
