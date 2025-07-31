@@ -1,7 +1,7 @@
 # Desyatkoff Dotfiles
 
 <img
-    src="assets/demo_preview.png"
+    src="assets/demo_1.png"
     align="right"
     width="600"
 />
