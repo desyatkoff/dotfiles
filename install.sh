@@ -8,189 +8,440 @@
 #########################################################
 
 
-# 0. Before installation
+# 0. Pre-installation preparations
 
-# Warning!
-# You can continue only if you already have Hyprland and all its dependencies installed
+clear
 
+set -euo pipefail
 
-# 1. Install required packages (if you remove or change something, you should edit all the configs as well)
+IFS=$'\n\t'
 
-sudo pacman -S --needed \
-    cava \
-    cliphist \
-    fastfetch \
-    firefox \
-    grim \
-    helix \
-    hyprlock \
-    hyprpicker \
-    peaclock \
-    satty \
-    superfile \
-    swww \
-    wl-clipboard \
-    waybar \
-    waypaper \
-    wofi \
-    wofi-emoji
+REQUIRED_PACKAGES=(
+    "btop"
+    "cava"
+    "cliphist"
+    "fastfetch"
+    "firefox"
+    "fzf"
+    "grim"
+    "gvfs"
+    "helix"
+    "hyprland"
+    "hyprlock"
+    "hyprpicker"
+    "hyprpolkitagent"
+    "jq"
+    "kitty"
+    "lazygit"
+    "lsd"
+    "mpv"
+    "noto-fonts"
+    "noto-fonts-cjk"
+    "noto-fonts-emoji"
+    "papirus-icon-theme"
+    "peaclock"
+    "satty"
+    "swaync"
+    "swww"
+    "thunar"
+    "ttf-jetbrains-mono-nerd"
+    "tumbler"
+    "waybar"
+    "waypaper"
+    "wf-recorder"
+    "wl-clipboard"
+    "wofi"
+    "xdg-desktop-portal-hyprland"
+    "zsh"
+)
 
+HOME_STUFF=(
+    "Scripts"
+    ".bashrc"
+    ".gtkrc-2.0"
+    ".zshrc"
+)
 
-# 2. Rename old configs so you can restore your old settings if needed
+PICTURES_STUFF=(
+    "Wallpapers"
+)
 
-if [ -d ~/.config/cava/ ]; then
-    mv -v \
-        ~/.config/cava/ \
-        ~/.config/cava-old/
+DOTCONFIG_STUFF=(
+    "btop"
+    "cava"
+    "fastfetch"
+    "fsh"
+    "gtk-3.0"
+    "gtk-4.0"
+    "helix"
+    "hypr"
+    "kitty"
+    "lazygit"
+    "lsd"
+    "mpv"
+    "mimeapps.list"
+    "peaclock"
+    "swaync"
+    "Thunar"
+    "user-dirs.dirs"
+    "user-dirs.locale"
+    "waypaper"
+    "waybar"
+    "wofi"
+    "xfce4"
+    "xsettingsd"
+)
+
+RED="\033[1;31m"
+GREEN="\033[1;32m"
+YELLOW="\033[1;33m"
+BLUE="\033[1;34m"
+MAGENTA="\033[1;35m"
+CYAN="\033[1;36m"
+RESET="\033[0m"
+
+log_ok() {
+    sleep 0.25
+
+    echo -en "${GREEN}[ OK      ]${RESET} $*"
+}
+
+log_fail() {
+    sleep 0.25
+
+    echo -en "${RED}[ FAIL    ]${RESET} $*"
+}
+
+log_warn() {
+    sleep 0.25
+
+    echo -en "${YELLOW}[ WARNING ]${RESET} $*"
+}
+
+log_info() {
+    sleep 0.25
+
+    echo -en "${BLUE}[ INFO    ]${RESET} $*"
+}
+
+log_ask() {
+    sleep 0.25
+
+    echo -en "${CYAN}[ CONFIRM ]${RESET} $*"
+}
+
+wait_dots() {
+    for i in 3 2 1; do
+        echo -n "."
+
+        sleep 0.33
+    done
+
+    echo ""
+}
+
+log_info "     _                       _   _          __  __ \n"
+log_info "  __| | ___  ___ _   _  __ _| |_| | _____  / _|/ _|\n"
+log_info " / _\` |/ _ \\/ __| | | |/ _\` | __| |/ / _ \\| |_| |_ \n"
+log_info "| (_| |  __/\\__ \\ |_| | (_| | |_|   < (_) |  _|  _|\n"
+log_info " \\__,_|\\___||___/\\__, |\\__,_|\\__|_|\\_\\___/|_| |_|  \n"
+log_info "                 |___/                             \n"
+log_info "             _       _    __ _ _                   \n"
+log_info "          __| | ___ | |_ / _(_) | ___  ___         \n"
+log_info " _____   / _\` |/ _ \\| __| |_| | |/ _ \\/ __|  _____ \n"
+log_info "|_____| | (_| | (_) | |_|  _| | |  __/\\__ \ |_____|\n"
+log_info "         \\__,_|\\___/ \\__|_| |_|_|\\___||___/        \n"
+log_info "\n"
+
+log_info "Welcome to desyatkoff/dotfiles auto-install script. Note that it was tested on Arch Linux only!\n"
+
+log_ask "Continue? [Y/n] "
+
+read -rp "" confirm
+
+if [[ "$confirm" =~ ^[Nn]$ ]]; then
+    log_info "Aborting installation process"
+
+    wait_dots
+
+    log_ok "Goodbye\n"
+
+    exit 0
+else
+    if ! command -v sudo &>/dev/null; then
+        if ! command -v doas &>/dev/null; then
+            log_warn "Could not find 'sudo' or 'doas'\n"
+
+            log_fail "Aborting installation process. Please install 'sudo' or 'doas' first and then run this script again\n"
+
+            exit 1
+        else
+            alias sudo="doas"
+        fi
+    fi
+
+    if [[ "$EUID" -eq 0 ]]; then
+        log_warn "This script is launched by root\n"
+
+        log_fail "Aborting installation process. Please do not run this script as root! Use a normal user account\n"
+
+        exit 1
+    fi
+
+    sudo -v
+
+    if [[ ! -d ".git" && ! -f "install.sh" ]]; then
+        if ! command -v git &>/dev/null; then
+            sudo pacman -S git
+        fi
+
+        git clone https://github.com/desyatkoff/dotfiles.git
+
+        cd dotfiles/
+    fi
+
+    CLONE_DIR=$(pwd)
 fi
 
-if [ -d ~/.config/fastfetch/ ]; then
-    mv -v \
-        ~/.config/fastfetch/ \
-        ~/.config/fastfetch-old/
+
+# 1. Packages installation
+
+log_info "Installing required packages"
+
+wait_dots
+
+if ! command -v yay &>/dev/null; then
+    git clone https://aur.archlinux.org/yay.git "$CLONE_DIR/yay/"
+
+    cd "$CLONE_DIR/yay/"
+
+    makepkg -si
+
+    cd "$CLONE_DIR"
 fi
 
-if [ -d ~/.config/helix/ ]; then
-    mv -v \
-        ~/.config/helix/ \
-        ~/.config/helix-old/
-fi
+yay -S --noconfirm --needed "${REQUIRED_PACKAGES[@]}"
 
-if [ -d ~/.config/hypr/ ]; then
-    mv -v \
-        ~/.config/hypr/ \
-        ~/.config/hypr-old/
-fi
-
-if [ -d ~/.config/kitty/ ]; then
-    mv -v \
-        ~/.config/kitty/ \
-        ~/.config/kitty-old/
-fi
-
-if [ -d ~/.config/peaclock/ ]; then
-    mv -v \
-        ~/.config/peaclock/ \
-        ~/.config/peaclock-old/
-fi
-
-if [ -d ~/.config/superfile/ ]; then
-    mv -v \
-        ~/.config/superfile/
-        ~/.config/superfile-old/
-fi
-
-if [ -d ~/.config/waybar/ ] then
-    mv -v \
-        ~/.config/waybar/ \
-        ~/.config/waybar-old/
-fi
-
-if [ -d ~/.config/waypaper/ ] then
-    mv -v \
-        ~/.config/waypaper/ \
-        ~/.config/waypaper-old/
-fi
-
-if [ -d ~/.config/wofi/ ]; then
-    mv -v \
-        ~/.config/wofi/ \
-        ~/.config/wofi-old/
-fi
-
-if [ -f ~/.bash_profile ]; then
-    mv -v \
-        ~/.bash_profile \
-        ~/.bash_profile-old
-fi
+log_ok "Packages installed\n"
 
 
-# 3. Create special directories for the new configs
+# 2. Old configs backup creation
 
-mkdir -v ~/.config/cava/
+log_info "Backing up existing configs"
 
-mkdir -v ~/.config/fastfetch/
+wait_dots
 
-mkdir -v ~/helix/
+for thing in "${HOME_STUFF[@]}"; do
+    target="$HOME/$thing"
 
-mkdir -v ~/.config/hypr/
+    if [[ -f "$target" || -d "$target" ]]; then
+        mv -v \
+            "$target" \
+            "${target}-old"
+    fi
+done
 
-mkdir -v ~/.config/kitty/
+for thing in "${PICTURES_STUFF[@]}"; do
+    target="$HOME/Pictures/$thing"
 
-mkdir -v ~/.config/peaclock/
+    if [[ -f "$target" || -d "$target" ]]; then
+        mv -v \
+            "$target" \
+            "${target}-old"
+    fi
+done
 
-mkdir -v ~/.config/superfile/
+for thing in "${DOTCONFIG_STUFF[@]}"; do
+    target="$HOME/.config/$thing"
 
-mkdir -v ~/.config/waybar/
+    if [[ -f "$target" || -d "$target" ]]; then
+        mv -v \
+            "$target" \
+            "${target}-old"
+    fi
+done
 
-mkdir -v ~/.config/waypaper/
-
-mkdir -v ~/.config/wofi/
-
-mkdir -v ~/Wallpapers/
-
-sudo mkdir -v -p /etc/systemd/system/getty@tty1.service.d/
+log_ok "Backups are done\n"
 
 
-# 4. Copy the new configs
+# 3. Config files copying
 
-cp -v \
-    ./cava/* \
-    ~/.config/cava/
+log_info "Copying configs"
 
-cp -v \
-    ./fastfetch/* \
-    ~/.config/fastfetch/
+wait_dots
 
-cp -v \
-    ./helix/* \
-    ~/.config/helix/
+mkdir -v ~/Pictures/
 
-cp -v \
-    ./hypr/* \
-    ~/.config/hypr/
+mkdir -v ~/.config/
 
-cp -v \
-    ./kitty/* \
-    ~/.config/kitty/
+for thing in "${HOME_STUFF[@]}"; do
+    cp -rv "$CLONE_DIR/$thing" "$HOME/$thing" 2>/dev/null || true
+done
 
-cp -v \
-    ./peaclock/* \
-    ~/.config/peaclock/
+for thing in "${PICTURES_STUFF[@]}"; do
+    cp -rv "$CLONE_DIR/$thing" "$HOME/Pictures/$thing" 2>/dev/null || true
+done
 
-cp -v \
-    ./superfile/* \
-    ~/.config/superfile/
+for thing in "${DOTCONFIG_STUFF[@]}"; do
+    cp -rv "$CLONE_DIR/$thing" "$HOME/.config/$thing" 2>/dev/null || true
+done
 
-cp -v \
-    ./waybar/* \
-    ~/.config/waybar/
+gsettings set org.gnome.desktop.wm.preferences button-layout ":"
 
-cp -v \
-    ./waypaper/* \
-    ~/.config/waypaper/
+RUNZSH=no KEEP_ZSHRC=yes sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
-cp -v \
-    ./wofi/* \
-    ~/.config/wofi/
+git clone https://github.com/zdharma-continuum/fast-syntax-highlighting.git "$CLONE_DIR/fast-syntax-highlighting/"
 
-cp -v \
-    ./Wallpapers/* \
-    ~/Wallpapers/
+cp -rv \
+    "$CLONE_DIR/fast-syntax-highlighting/" \
+    "$HOME/.oh-my-zsh/custom/plugins/fast-syntax-highlighting/"
 
-cp -v \
-    ./.bash_profile \
-    ~/.bash_profile
+zsh fast-theme XDG:catppuccin-mocha
 
+git clone https://github.com/Aloxaf/fzf-tab.git "$CLONE_DIR/fzf-tab/"
+
+cp -rv \
+    "$CLONE_DIR/fzf-tab/" \
+    "$HOME/.oh-my-zsh/custom/plugins/fzf-tab/"
+
+git clone https://github.com/catppuccin/papirus-folders.git "$CLONE_DIR/papirus-folders/"
+
+cd "$CLONE_DIR/papirus-folders/"
+
+sudo cp -rv ./src/* /usr/share/icons/Papirus/
+
+curl -LO https://raw.githubusercontent.com/PapirusDevelopmentTeam/papirus-folders/master/papirus-folders
+
+chmod +x ./papirus-folders
+
+./papirus-folders -C cat-mocha-blue --theme Papirus-Dark
+
+cd "$CLONE_DIR"
+
+echo "[Service]" > "./autologin.conf"
+echo "ExecStart=" >> "./autologin.conf"
+echo "ExecStart=-/usr/bin/agetty --autologin $(logname) --noclear %I \$TERM" >> "./autologin.conf"
+
+sudo mkdir -v /etc/systemd/system/getty@tty1.service.d/
 
 sudo cp -v \
-    ./autologin.conf \
-    /etc/systemd/system/getty@tty1.service.d/
+    "$CLONE_DIR/autologin.conf" \
+    "/etc/systemd/system/getty@tty1.service.d/autologin.conf"
+
+log_ok "Configs are done\n"
+
+
+# 4. Cleanup
+
+log_info "Cleaning up\n"
+
+log_info "Synchronizing packages"
+
+wait_dots
+
+yay -Suy --noconfirm
+
+log_ok "Synchronizing is done\n"
+
+log_info "Checking orphans"
+
+wait_dots
+
+orphans=$(yay -Qttdq 2>/dev/null || true)
+
+if [[ -n "$orphans" ]]; then
+    log_info "Found orphaned packages\n"
+
+    log_info "The following orphaned packages were found:"
+
+    echo "$orphans"
+
+    log_ask "Remove them? [y/N] "
+
+    read -rp "" remove_orphans
+
+    if [[ "$remove_orphans" =~ ^[Yy]$ ]]; then
+        log_info "Removing orphans"
+
+        wait_dots
+
+        echo "$orphans" | xargs yay -Rns --noconfirm
+
+        log_ok "Orphans removed\n"
+    else
+        log_info "Skipping orphans\n"
+    fi
+fi
+
+log_ok "Done\n"
+
+log_ask "Clear 'yay' cache completely? [y/N] "
+
+read -rp "" clear_cache
+
+if [[ "$clear_cache" =~ ^[Yy]$ ]]; then
+    log_info "Clearing cache"
+
+    wait_dots
+
+    yay -Scc --noconfirm
+else
+    log_info "Skipping cache\n"
+fi
+
+log_ok "Done\n"
 
 
 # 5. After installation
 
-systemctl reboot
+log_ok "Dotfiles installed successfully!\n"
 
-# Success!
-# Enjoy your new clean Hyprland setup with my personal dotfiles that I use every day
+log_ask "Remove this cloned repository? [y/N] "
+
+read -rp "" remove_repo_confirm
+
+if [[ "$remove_repo_confirm" =~ ^[Yy]$ ]]; then
+    log_info "Removing repository"
+
+    wait_dots
+
+    cd "$CLONE_DIR/.."
+
+    rm -rfv "$CLONE_DIR"
+
+    log_ok "Repository removed\n"
+else
+    log_info "Skipping\n"
+fi
+
+cd ~
+
+log_ok "Done\n"
+
+log_ask "Reboot now? [Y/n] "
+
+read -rp "" reboot_confirm
+
+log_info "I hope you will like this Arch + Hyprland desktop experience, $(logname) :)\n"
+
+if [[ ! "$reboot_confirm" =~ ^[Nn]$ ]]; then
+    log_warn "Reboot in"
+
+    for i in 3 2 1; do
+        echo -n " $i"
+
+        for j in 3 2 1; do
+            echo -n "."
+
+            sleep 0.33
+        done
+    done
+
+    echo ""
+
+    log_ok "Goodbye\n"
+
+    systemctl reboot
+else
+    log_ok "Goodbye\n"
+fi

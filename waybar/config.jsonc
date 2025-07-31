@@ -1,77 +1,123 @@
 {
     "layer": "top",
     "position": "top",
-    "height": 36,
+    "height": 40,
     "spacing": 8,
-    "margin-left": 8,
-    "margin-right": 8,
-    "margin-top": 8,
-    "margin-bottom": 0,
-    "reload_style_on_change": true,
     "modules-left": [
-        "custom/app-launcher",
+        "custom/dashboard",
         "hyprland/workspaces"
     ],
     "modules-center": [
-        "clock"
+        "hyprland/window"
     ],
     "modules-right": [
-        "tray",
         "pulseaudio",
-        "temperature",
+        "network",
         "cpu",
         "memory",
-        "custom/power-menu"
+        "clock",
+        "tray",
+        "group/power"
     ],
-    "custom/app-launcher": {
-        "format": "󰣇 ",
-        "tooltip-format": "Application launcher",
-        "on-click": "wofi --show drun --sort-order alphabetical"
+    "custom/dashboard": {
+        "format": "󰣇",
+        "on-click": "swaync-client -t",
+        "tooltip": false
     },
     "hyprland/workspaces": {
-        "disable-scroll": false,
         "all-outputs": true,
-        "on-click": "activate",
         "persistent-workspaces": {
             "*": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
         }
     },
-    "clock": {
-        "interval": 1,
-        "timezone": "Asia/Yekaterinburg",
-        "format": "󰥔  {:%H:%M:%S, %Y-%m-%d}",
-        "tooltip-format": "{calendar}"
-    },
-    "tray": {
+    "hyprland/window": {
+        "rewrite": {
+            "": "Desktop"
+        },
+        "icon": true,
         "icon-size": 16,
-        "spacing": 8
+        "spacing": 8,
+        "tooltip": false
     },
     "pulseaudio": {
-        "format": "󰕾  {volume}%",
-        "format-muted": "󰖁  0%",
-        "tooltip-format": "Sound volume",
+        "format": "󰕾 {volume}%",
+        "format-muted": "󰖁 0%",
+        "on-click": "pactl -- set-sink-mute 0 toggle",
         "on-click-right": "pavucontrol",
-        "on-click": "pactl -- set-sink-mute 0 toggle"
+        "tooltip": false
     },
-    "temperature": {
-        "interval": 1,
-        "hwmon-path": "/sys/class/hwmon/hwmon0/temp1_input",
-        "format": "  {temperatureC}°C",
-        "tooltip-format": "CPU temperature (Celsius)"
+    "network": {
+        "format": "{ifname}",
+        "format-ethernet": " {ifname}",
+        "format-wifi": " {ifname}",
+        "tooltip": false
     },
     "cpu": {
         "interval": 1,
-        "format": "󰍛  {usage}%",
-        "tooltip-format": "CPU usage percentage"
+        "format": "󰍛 {usage}%",
+        "tooltip": false
     },
     "memory": {
         "interval": 1,
-        "format": "   {used} GiB / {total} GiB",
-        "tooltip-format": "RAM usage ({percentage}%)"
+        "format": " {percentage}%",
+        "tooltip": false
     },
-    "custom/power-menu": {
-        "format": " ",
-        "tooltip-format": "Power menu",
-        "on-click": "sh ~/.config/wofi/scripts/power_menu.sh"
+    "clock": {
+        "interval": 1,
+        "format": "󰥔 {:%H:%M:%S}",
+        "format-alt": "󰥔 {:%H:%M:%S | 󰃭 %Y-%m-%d}",
+        "timezone": "Asia/Yekaterinburg",
+        "tooltip": false
+    },
+    "tray": { 
+        "icon-size": 16,
+        "spacing": 8
+    },
+    "group/power": {
+        "orientation": "horizontal",
+        "modules": [
+            "custom/shutdown",
+            "custom/lock",
+            "custom/hibernate",
+            "custom/logout",
+            "custom/suspend",
+            "custom/reboot"
+        ],
+        "drawer": {
+            "transition-duration": 500,
+            "transition-left-to-right": false,
+            "children-class": "power-drawer-child",
+            "click-to-reveal": false
+        }
+    },
+    "custom/shutdown": {
+        "format": "",
+        "on-click": "sh ~/Scripts/shutdown.sh",
+        "tooltip": false
+    },
+    "custom/reboot": {
+        "format": "",
+        "on-click": "sh ~/Scripts/reboot.sh",
+        "tooltip": false
+    },
+    "custom/suspend": {
+        "format": "",
+        "on-click": "systemctl suspend",
+        "tooltip": false
+    },
+    "custom/logout": {
+        "format": "󰍃",
+        "on-click": "hyprctl dispatch exit",
+        "tooltip": false
+    },
+    "custom/hibernate": {
+        "format": "",
+        "on-click": "systemctl hibernate",
+        "tooltip": false
+    },
+    "custom/lock": {
+        "format": "󰌾",
+        "on-click": "hyprlock",
+        "tooltip": false
     }
 }

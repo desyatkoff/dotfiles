@@ -1,26 +1,31 @@
 * {
+    background: none;
     color: #cdd6f4;
+    font-family: "Noto Sans";
+    font-size: 16px;
     font-style: normal;
-    background: transparent;
-    font-family: "Adwaita Sans"; 
+    outline: none;
 }
 
 #window {
+    background: #1e1e2e;
+    border-radius: 8px;
+    border: 2px solid #89b4fa;
     margin: 4px;
     padding: 4px;
-    border-radius: 8px;
-    background: #1e1e2e;
-    border: 2px solid #89b4fa;
 }
 
 #input {
-    padding: 4px;
-    margin: 4px;
+    background: #313244;
     border-radius: 8px;
+    margin: 16px 8px;
+    padding: 4px 16px;
 }
 
 #outer-box {
-    padding: 16px;
+    border: 2px solid #89b4fa;
+    border-radius: 8px;
+    padding: 4px;
 }
 
 #img {
@@ -28,12 +33,14 @@
 }
 
 #entry {
-    padding: 4px;
+    background-color: #313244;
     border-radius: 8px;
+    margin: 4px;
+    padding: 4px;
 }
 
 #entry:selected {
-    background-color: #313244;
+    background-color: #6c7086;
 }
 
 #text {

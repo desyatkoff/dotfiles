@@ -6,21 +6,12 @@ mouse = true
 default-yank-register = "\""
 middle-click-paste = true
 scroll-lines = 4
-shell = [
-    "sh",
-    "-c"
-]
+shell = ["sh", "-c"]
 line-number = "absolute"
-cursorline = false
+cursorline = true
 cursorcolumn = false
 continue-comments = true
-gutters = [
-    "diagnostics",
-    "spacer",
-    "line-numbers",
-    "spacer",
-    "diff"
-]
+gutters = ["diff", "diagnostics", "line-numbers", "spacer"]
 auto-completion = true
 path-completion = true
 auto-format = false
@@ -28,7 +19,7 @@ idle-timeout = 250
 completion-timeout = 250
 preview-completion-insert = true
 completion-trigger-len = 1
-completion-replace = false
+completion-replace = true
 auto-info = true
 true-color = false
 undercurl = false
@@ -38,7 +29,7 @@ color-modes = false
 text-width = 99
 workspace-lsp-roots = []
 default-line-ending = "lf"
-insert-final-newline = false
+insert-final-newline = true
 popup-border = "all"
 indent-heuristic = "simple"
 jump-label-alphabet = "abcdefghijklmnopqrstuvwxyz"
@@ -46,16 +37,9 @@ end-of-line-diagnostics = "disable"
 clipboard-provider = "wayland"
 
 [editor.statusline]
-left = [
-    "mode"
-]
-center = [
-    "file-name"
-]
-right = [
-    "file-type",
-    "position"
-]
+left = ["mode", "spinner"]
+center = ["file-base-name", "read-only-indicator", "file-modification-indicator"]
+right = ["diagnostics", "position", "file-type"]
 separator = "|"
 mode.normal = "NORMAL"
 mode.insert = "INSERT"
@@ -77,9 +61,9 @@ normal = "block"
 select = "underline"
 
 [editor.file-picker]
-hidden = true
+hidden = false
 follow-symlinks = true
-deduplicate-links = true
+deduplicate-links = false
 parents = true
 ignore = true
 git-ignore = true
@@ -140,4 +124,3 @@ other-lines = "info"
 prefix-len = 1
 max-wrap = 24
 max-diagnostics = 8
-

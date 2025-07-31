@@ -1,138 +1,173 @@
 * {
-    border: none;
+    font-family: "Noto Sans", "JetBrainsMono Nerd Font Propo";
     font-size: 16px;
-    transition: none;
-    border-radius: 0;
     font-weight: normal;
-}
-
-tooltip {
-    color: #cdd6f4;
-    border-radius: 8px;
-    background: #1e1e2e;
-    border: 2px solid #11111b;
-    font-family: "Adwaita Mono";
+    transition: none;
+    border: none;
+    border-radius: 2px;
 }
 
 #waybar {
-    background: transparent;
-}
-
-#custom-app-launcher {
-    color: #89b4fa;
-    min-width: 24px;
-    font-size: 24px;
-    padding-left: 8px;
-    border-radius: 8px;
     background: #1e1e2e;
-    border: 2px solid #89b4fa;
-    font-family: "Adwaita Sans";
+    border-bottom: 2px solid #11111b;
 }
 
-#custom-app-launcher:hover {
+#custom-dashboard {
+    color: #89b4fa;
+    font-size: 24px;
+    padding: 0 8px;
+    margin-left: 16px;
+    border-top: 2px solid #1e1e2e;
+    border-bottom: 2px solid #89b4fa;
+}
+
+#custom-dashboard:hover {
     background: #313244;
 }
 
 #workspaces {
-    border-radius: 8px;
-    background: #1e1e2e;
-    border: 2px solid #74c7ec;
+    border-bottom: 2px solid #74c7ec;
 }
 
 #workspaces button {
-    color: #cdd6f4;
-    min-width: 14px;
-    background: transparent;
-    font-family: "Adwaita Sans";
-}
-
-#workspaces button.persistent {
-    color: #a6adc8;
-}
-
-#workspaces button:hover {
-    color: #74c7ec;
-    box-shadow: inherit;
-    text-shadow: inherit;
-    border-radius: inherit;
+    color: #6c7086;
+    border-top: 2px solid #1e1e2e;
 }
 
 #workspaces button.active {
     color: #74c7ec;
-    border-radius: 8px;
+}
+
+#workspaces button:hover {
     background: #313244;
 }
 
-#clock {
+#window {
+    padding: 0 8px;
+    margin: 0 80px;
     color: #89dceb;
-    min-width: 256px;
-    border-radius: 8px;
-    background: #1e1e2e;
-    border: 2px solid #89dceb;
-    font-family: "Adwaita Sans";
-}
-
-#tray {
-    color: #94e2d5;
-    min-width: 32px;
-    padding-left: 8px;
-    border-radius: 8px;
-    padding-right: 8px;
-    background: #1e1e2e;
-    border: 2px solid #94e2d5;
-    font-family: "Adwaita Sans";
+    border-top: 2px solid #1e1e2e;
+    border-bottom: 2px solid #89dceb;
 }
 
 #pulseaudio {
-    color: #a6e3a1;
-    min-width: 80px;
-    border-radius: 8px;
-    background: #1e1e2e;
-    border: 2px solid #a6e3a1;
-    font-family: "Adwaita Sans";
+    color: #94e2d5;
+    padding: 0 8px;
+    border-top: 2px solid #1e1e2e;
+    border-bottom: 2px solid #94e2d5;
 }
 
 #pulseaudio:hover {
     background: #313244;
 }
 
-#temperature {
-    color: #f9e2af;
-    min-width: 80px;
-    border-radius: 8px;
-    background: #1e1e2e;
-    border: 2px solid #f9e2af;
-    font-family: "Adwaita Sans";
+#network {
+    color: #a6e3a1;
+    padding: 0 8px;
+    border-top: 2px solid #1e1e2e;
+    border-bottom: 2px solid #a6e3a1;
 }
 
 #cpu {
-    color: #fab387;
-    min-width: 80px;
-    border-radius: 8px;
-    background: #1e1e2e;
-    border: 2px solid #fab387;
-    font-family: "Adwaita Sans";
+    color: #f9e2af;
+    padding: 0 8px;
+    border-top: 2px solid #1e1e2e;
+    border-bottom: 2px solid #f9e2af;
 }
 
 #memory {
+    color: #fab387;
+    padding: 0 8px;
+    border-top: 2px solid #1e1e2e;
+    border-bottom: 2px solid #fab387;
+}
+
+#clock {
     color: #eba0ac;
-    min-width: 192px;
-    border-radius: 8px;
-    background: #1e1e2e;
-    border: 2px solid #eba0ac;
-    font-family: "Adwaita Sans";
+    padding: 0 8px;
+    border-top: 2px solid #1e1e2e;
+    border-bottom: 2px solid #eba0ac;
 }
 
-#custom-power-menu {
+#clock:hover {
+    background: #313244;
+}
+
+#tray {
+    color: #cdd6f4;
+    padding: 0 8px;
+    border-top: 2px solid #1e1e2e;
+    border-bottom: 2px solid #cdd6f4;
+}
+
+#custom-lock {
+    color: #94e2d5;
+    padding: 0 8px;
+    margin-right: 4px;
+    border-top: 2px solid #1e1e2e;
+    border-bottom: 2px solid #94e2d5;
+}
+
+#custom-lock:hover {
+    background: #313244;
+}
+
+#custom-hibernate {
+    color: #a6e3a1;
+    padding: 0 8px;
+    margin: 0 4px;
+    border-top: 2px solid #1e1e2e;
+    border-bottom: 2px solid #a6e3a1;
+}
+
+#custom-hibernate:hover {
+    background: #313244;
+}
+
+#custom-logout {
+    color: #f9e2af;
+    padding: 0 8px;
+    margin: 0 4px;
+    border-top: 2px solid #1e1e2e;
+    border-bottom: 2px solid #f9e2af;
+}
+
+#custom-logout:hover {
+    background: #313244;
+}
+
+#custom-suspend {
+    color: #fab387;
+    padding: 0 8px;
+    margin: 0 4px;
+    border-top: 2px solid #1e1e2e;
+    border-bottom: 2px solid #fab387;
+}
+
+#custom-suspend:hover {
+    background: #313244;
+}
+
+#custom-reboot {
+    color: #eba0ac;
+    padding: 0 8px;
+    margin: 0 8px 0 4px;
+    border-top: 2px solid #1e1e2e;
+    border-bottom: 2px solid #eba0ac;
+}
+
+#custom-reboot:hover {
+    background: #313244;
+}
+
+#custom-shutdown {
     color: #f38ba8;
-    min-width: 24px;
-    padding-left: 8px;
-    border-radius: 8px;
-    background: #1e1e2e;
-    border: 2px solid #f38ba8;
-    font-family: "Adwaita Sans";
+    padding: 0 8px;
+    margin-right: 16px;
+    border-top: 2px solid #1e1e2e;
+    border-bottom: 2px solid #f38ba8;
 }
 
-#custom-power-menu:hover {
+#custom-shutdown:hover {
     background: #313244;
 }

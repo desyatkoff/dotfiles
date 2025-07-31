@@ -4,9 +4,6 @@ margin 0 0
 ratio 2 1
 date-padding 1
 fill ''
-# fill-active ''
-# fill-inactive ''
-# fill-colon ''
 locale ''
 timezone ''
 date '%Y-%m-%d'
@@ -36,4 +33,3 @@ style text clear
 style prompt clear
 style success green
 style error red
-
