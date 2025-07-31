@@ -1,0 +1,32 @@
+[general]
+fullscreen = true
+early-exit = true
+corner-roundness = 0
+initial-tool = "brush"
+copy-command = "wl-copy"
+annotation-size-factor = 1
+output-filename = "$HOME/Pictures/Screenshots/%Y-%m-%d_%H-%M-%S.png"
+save-after-copy = false
+default-hide-toolbars = false
+primary-highlighter = "block"
+disable-notifications = true
+actions-on-right-click = ["save-to-clipboard", "save-to-file", "exit"]
+actions-on-enter = ["save-to-clipboard"]
+actions-on-escape = ["exit"]
+no-window-decoration = false
+brush-smooth-history-size = 8
+
+[font]
+family = "Noto Sans"
+style = "Regular"
+
+[color-palette]
+palette = [
+    "#f38ba8",
+    "#fab387",
+    "#f9e2af",
+    "#a6e3a1",
+    "#89b4fa",
+    "#cba6f7"
+]
+custom = []

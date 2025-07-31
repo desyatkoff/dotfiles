@@ -56,43 +56,6 @@ REQUIRED_PACKAGES=(
     "zsh"
 )
 
-HOME_STUFF=(
-    "Scripts"
-    ".bashrc"
-    ".gtkrc-2.0"
-    ".zshrc"
-)
-
-PICTURES_STUFF=(
-    "Wallpapers"
-)
-
-DOTCONFIG_STUFF=(
-    "btop"
-    "cava"
-    "fastfetch"
-    "fsh"
-    "gtk-3.0"
-    "gtk-4.0"
-    "helix"
-    "hypr"
-    "kitty"
-    "lazygit"
-    "lsd"
-    "mpv"
-    "mimeapps.list"
-    "peaclock"
-    "swaync"
-    "Thunar"
-    "user-dirs.dirs"
-    "user-dirs.locale"
-    "waypaper"
-    "waybar"
-    "wofi"
-    "xfce4"
-    "xsettingsd"
-)
-
 RED="\033[1;31m"
 GREEN="\033[1;32m"
 YELLOW="\033[1;33m"
@@ -232,28 +195,8 @@ log_info "Backing up existing configs"
 
 wait_dots
 
-for thing in "${HOME_STUFF[@]}"; do
-    target="$HOME/$thing"
-
-    if [[ -f "$target" || -d "$target" ]]; then
-        mv -v \
-            "$target" \
-            "${target}-old"
-    fi
-done
-
-for thing in "${PICTURES_STUFF[@]}"; do
-    target="$HOME/Pictures/$thing"
-
-    if [[ -f "$target" || -d "$target" ]]; then
-        mv -v \
-            "$target" \
-            "${target}-old"
-    fi
-done
-
-for thing in "${DOTCONFIG_STUFF[@]}"; do
-    target="$HOME/.config/$thing"
+for thing in $CLONE_DIR/home/*; do
+    target="$HOME/$(basename $thing)"
 
     if [[ -f "$target" || -d "$target" ]]; then
         mv -v \
@@ -271,24 +214,10 @@ log_info "Copying configs"
 
 wait_dots
 
-if [[ ! -d "$HOME/Pictures" ]]; then
-    mkdir -v "$HOME/Pictures"
-fi
+for thing in $CLONE_DIR/home/*; do
+    target="$HOME/$(basename $thing)"
 
-if [[ ! -d "$HOME/.config" ]]; then
-    mkdir -v "$HOME/.config"
-fi
-
-for thing in "${HOME_STUFF[@]}"; do
-    cp -rv "$CLONE_DIR/$thing" "$HOME/$thing" 2>/dev/null || true
-done
-
-for thing in "${PICTURES_STUFF[@]}"; do
-    cp -rv "$CLONE_DIR/$thing" "$HOME/Pictures/$thing" 2>/dev/null || true
-done
-
-for thing in "${DOTCONFIG_STUFF[@]}"; do
-    cp -rv "$CLONE_DIR/$thing" "$HOME/.config/$thing" 2>/dev/null || true
+    cp -rv "$thing" "$target" 2>/dev/null || true
 done
 
 gsettings set org.gnome.desktop.wm.preferences button-layout ":"
@@ -323,13 +252,9 @@ chmod +x ./papirus-folders
 
 cd "$CLONE_DIR"
 
-echo "[Service]" > "./autologin.conf"
-echo "ExecStart=" >> "./autologin.conf"
-echo "ExecStart=-/usr/bin/agetty --autologin $(logname) --noclear %I \$TERM" >> "./autologin.conf"
-
-if [ ! -d "/etc/systemd/system/getty@tty1.service.d" ]; then
-    sudo mkdir -v "/etc/systemd/system/getty@tty1.service.d/"
-fi
+echo "[Service]" > "$CLONE_DIR/autologin.conf"
+echo "ExecStart=" >> "$CLONE_DIR/autologin.conf"
+echo "ExecStart=-/usr/bin/agetty --autologin $(logname) --noclear %I \$TERM" >> "$CLONE_DIR/autologin.conf"
 
 sudo cp -v \
     "$CLONE_DIR/autologin.conf" \

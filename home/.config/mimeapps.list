@@ -1,6 +1,7 @@
 [Default Applications]
 application/json=helix.desktop;
 application/x-shellscript=helix.desktop;
+application/xml=helix.desktop;
 audio/aac=mpv.desktop;
 audio/ac3=mpv.desktop;
 audio/AMR=mpv.desktop;
