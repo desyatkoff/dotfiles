@@ -3,25 +3,29 @@
 <img
     src="assets/demo_1.png"
     align="right"
-    width="512"
+    width="500"
 />
 
-* Operating System -> `Arch Linux`
-* Terminal Shell -> `Zsh`
-* Text Editor -> `Helix`
-* Login Manager -> `Hyprlock`
-* Window Compositor -> `Hyprland`
-* Theme -> `Catppuccin Mocha`
-* Icons -> `Papirus Dark`
-* Font -> `Noto Sans`
-* Terminal -> `Kitty`
-* Terminal Font -> `JetBrainsMono NF`
+* Operating System: `Arch Linux`
+* Terminal Shell: `Zsh`
+* Text Editor: `Helix`
+* Login Manager: `Hyprlock`
+* Window Compositor: `Hyprland`
+* Theme: `Catppuccin Mocha`
+* Icons: `Papirus Dark`
+* Font: `Noto Sans`
+* Terminal: `Kitty`
+* Terminal Font: `JetBrainsMono NF`
 
 <br />
 
 ## Description
 
 This repository stores my dotfiles that I personally use. Beautiful and useful! Maybe not the best rice because I'm not pro but at least it's not trashy Windows and also it's good enough for efficient work
+
+README is currently available in two languages:
+* **[Read in English](README.en.md)**
+* [Читать на русском](README.ru.md)
 
 ## Features
 
@@ -77,7 +81,7 @@ It is recommended to reboot after the installation process done
 * `Super` + `Shift` + `1` / `2` / `3` / `4` / `5` / `6` / `7` / `8` / `9` / `0` -> Move active window to workspace
 * `Super` + `S` -> Go to special workspace
 * `Super` + `Shift` + `S` -> Move active window to special workspace
-* See [hypr/hyprland/binds.conf](hypr/hyprland/binds.conf) for more
+* See [~/.config/hypr/hyprland/binds.conf](home/config/hypr/hyprland/binds.conf) for more
 
 ## Demo
 
