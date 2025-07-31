@@ -18,6 +18,7 @@ IFS=$'\n\t'
 
 REQUIRED_PACKAGES=(
     "btop"
+    "catppuccin-gtk-theme-mocha"
     "cava"
     "cliphist"
     "fastfetch"
@@ -270,6 +271,14 @@ log_info "Copying configs"
 
 wait_dots
 
+if [[ ! -d "$HOME/Pictures" ]]; then
+    mkdir -v "$HOME/Pictures"
+fi
+
+if [[ ! -d "$HOME/.config" ]]; then
+    mkdir -v "$HOME/.config"
+fi
+
 for thing in "${HOME_STUFF[@]}"; do
     cp -rv "$CLONE_DIR/$thing" "$HOME/$thing" 2>/dev/null || true
 done
@@ -318,7 +327,7 @@ echo "[Service]" > "./autologin.conf"
 echo "ExecStart=" >> "./autologin.conf"
 echo "ExecStart=-/usr/bin/agetty --autologin $(logname) --noclear %I \$TERM" >> "./autologin.conf"
 
-sudo mkdir -v /etc/systemd/system/getty@tty1.service.d/
+sudo mkdir -v "/etc/systemd/system/getty@tty1.service.d/"
 
 sudo cp -v \
     "$CLONE_DIR/autologin.conf" \
