@@ -3,12 +3,10 @@
 <img
     src="assets/demo_1.png"
     align="right"
-    width="600"
+    width="512"
 />
 
 * Operating System: `Arch Linux`
-* Fetch: `Fastfetch`
-* Theme: `Catppuccin Mocha`
 * Terminal Shell: `Zsh`
 * Window Compositor: `Hyprland`
 * Terminal: `Kitty`
