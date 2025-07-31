@@ -327,7 +327,9 @@ echo "[Service]" > "./autologin.conf"
 echo "ExecStart=" >> "./autologin.conf"
 echo "ExecStart=-/usr/bin/agetty --autologin $(logname) --noclear %I \$TERM" >> "./autologin.conf"
 
-sudo mkdir -v "/etc/systemd/system/getty@tty1.service.d/"
+if [ ! -d "/etc/systemd/system/getty@tty1.service.d" ]; then
+    sudo mkdir -v "/etc/systemd/system/getty@tty1.service.d/"
+fi
 
 sudo cp -v \
     "$CLONE_DIR/autologin.conf" \
