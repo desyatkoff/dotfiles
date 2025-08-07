@@ -3,7 +3,7 @@
 <img
     src="assets/demo_13.png"
     align="right"
-    width="512"
+    width="500"
 />
 
 * Операционная система: [`Arch Linux`](https://archlinux.org)
