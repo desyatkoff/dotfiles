@@ -1,37 +1,46 @@
 # Desyatkoff Dotfiles
 
 <img
-    src="assets/demo_1.png"
+    src="assets/demo_13.png"
     align="right"
-    width="500"
+    width="512"
 />
 
-* Operating System: `Arch Linux`
-* Terminal Shell: `Zsh`
-* Text Editor: `Helix`
-* Login Manager: `Hyprlock`
-* Window Compositor: `Hyprland`
-* Theme: `Catppuccin Mocha`
-* Icons: `Papirus Dark`
-* Font: `Noto Sans`
-* Terminal: `Kitty`
-* Terminal Font: `JetBrainsMono NF`
+* Operating System: [`Arch Linux`](https://archlinux.org)
+* Terminal Shell: [`Zsh`](https://www.zsh.org)
+* Text Editor: [`Helix`](https://helix-editor.com)
+* Window Compositor: [`Hyprland`](https://hypr.land)
+* Theme: [`Catppuccin Mocha`](https://catppuccin.com)
+* Icons: [`Papirus Dark`](https://github.com/PapirusDevelopmentTeam/papirus-icon-theme)
+* Terminal: [`Kitty`](https://sw.kovidgoyal.net/kitty/)
+* Status Bar: [`Waybar`](https://github.com/Alexays/Waybar)
+* Launcher: [`Rofi`](https://github.com/davatorium/rofi)
+* Dock Panel: [`Hydock`](https://github.com/desyatkoff/hydock)
 
 <br />
 
+<p align="center">
+    &ensp;<a href="#desyatkoff-dotfiles"><kbd>&ensp;<br />&ensp;&ensp;Dotfiles&ensp;&ensp;<br />&ensp;</kbd></a>&ensp;
+    &ensp;<a href="#description"><kbd>&ensp;<br />&ensp;&ensp;Description&ensp;&ensp;<br />&ensp;</kbd></a>&ensp;
+    &ensp;<a href="#features"><kbd>&ensp;<br />&ensp;&ensp;Features&ensp;&ensp;<br />&ensp;</kbd></a>&ensp;
+    &ensp;<a href="#installation"><kbd>&ensp;<br />&ensp;&ensp;Installation&ensp;&ensp;<br />&ensp;</kbd></a>&ensp;
+    &ensp;<a href="#shortcuts"><kbd>&ensp;<br />&ensp;&ensp;Shortcuts&ensp;&ensp;<br />&ensp;</kbd></a>&ensp;
+    &ensp;<a href="#demo"><kbd>&ensp;<br />&ensp;&ensp;Demo&ensp;&ensp;<br />&ensp;</kbd></a>&ensp;
+</p>
+
 ## Description
 
-This repository stores my dotfiles that I personally use. Beautiful and useful! Maybe not the best rice because I'm not pro but at least it's not trashy Windows and also it's good enough for efficient work
+This repository stores my dotfiles that I personally use. Maybe not the best rice because I'm not pro but at least it's not trashy Windows and also it's good enough for efficient work
 
 README is currently available in two languages:
-* **[Read in English](README.en.md)**
-* [Читать на русском](README.ru.md)
+* [`English`](README.en.md)
+* [`Русский`](README.ru.md)
 
 ## Features
 
-* Simple & lightweight
+* Simple & lightweight (~900 MiB of RAM usage on idle)
 * Smooth animations
-* Catppuccin Mocha color palette
+* Beautiful Catppuccin color palette with Mocha variation
 * Modular structure
 * Useful shortcuts
 * Convenient installation process
@@ -60,28 +69,29 @@ It is recommended to reboot after the installation process done
 * `Super` + `Shift` + `B` -> Launch Firefox (private window)
 * `Super` + `Q` -> Close active window
 * `Super` + `Shift` + `Q` -> Close active window (force) 
-* `Super` + `Alt` + `L` -> Lock
+* `Super` + `L` -> Lock
 * `Super` + `F` -> Toggle floating mode for active window
 * `Super` + `Shift` + `F` -> Toggle fullscreen mode for active window
-* `Super` + `Space` -> Open app launcher
-* `Super` + `V` -> Open clipboard
-* `Super` + `.` -> Open emoji picker
-* `Super` + `P` -> Launch screen color picker
-* `Super` + `Alt` + `J` -> Toggle split mode
-* `Super` + `W` -> Toggle Waybar
-* `Super` + `N` -> Toggle SwayNC
+* `Super` + `J` -> Toggle split mode
+* `Super` + `N` -> Toggle SwayNC panel
+* `Alt` + `Tab` -> Cycle active windows
 * `Super` + `G` -> Toggle "Game Mode" (less eye candy stuff -> more performance)
-* `Alt` + `Tab` -> Move focus
-* `Print Screen` -> Take a screenshot
 * `Super` + `Print Screen` -> Start/Stop screen recording
-* `Super` + `←` / `→` / `↑` / `↓` / `H` / `L` / `K` / `J` -> Move focus
-* `Super` + `Shift` + `←` / `→` / `↑` / `↓` / `H` / `L` / `K` / `J` -> Move window
-* `Super` + `Control` + `←` / `→` / `↑` / `↓` / `H` / `L` / `K` / `J` -> Resize window
+* `Print Screen` -> Take a screenshot
+* `Super` + `V` -> Open clipboard
+* `Super` + `Alt` + `W` -> Toggle wallpaper switcher
+* `Super` + `Space` -> Toggle Rofi
+* `Super` + `W` -> Toggle Waybar
+* `Super` + `P` -> Launch screen color picker
+* `Super` + `D` -> Toggle Hydock
+* `Super` + `←` / `→` / `↑` / `↓` -> Move focus
+* `Super` + `Shift` + `←` / `→` / `↑` / `↓` -> Move window
+* `Super` + `Control` + `←` / `→` / `↑` / `↓` -> Resize window
 * `Super` + `1` / `2` / `3` / `4` / `5` / `6` / `7` / `8` / `9` / `0` -> Go to workspace
 * `Super` + `Shift` + `1` / `2` / `3` / `4` / `5` / `6` / `7` / `8` / `9` / `0` -> Move active window to workspace
 * `Super` + `S` -> Go to special workspace
 * `Super` + `Shift` + `S` -> Move active window to special workspace
-* See [~/.config/hypr/hyprland/binds.conf](home/config/hypr/hyprland/binds.conf) for more
+* See [`~/.config/hypr/hyprland/binds.conf`](home/config/hypr/hyprland/binds.conf) for more
 
 ## Demo
 
@@ -92,3 +102,13 @@ It is recommended to reboot after the installation process done
 ![](assets/demo_5.png)
 ![](assets/demo_6.png)
 ![](assets/demo_7.png)
+![](assets/demo_8.png)
+![](assets/demo_9.png)
+![](assets/demo_10.png)
+![](assets/demo_11.png)
+![](assets/demo_12.png)
+![](assets/demo_13.png)
+![](assets/demo_14.png)
+![](assets/demo_15.png)
+![](assets/demo_16.png)
+![](assets/demo_17.png)
