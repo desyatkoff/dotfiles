@@ -17,6 +17,8 @@
 * Лаунчер: [`Rofi`](https://github.com/davatorium/rofi)
 * Док панель: [`Hydock`](https://github.com/desyatkoff/hydock)
 
+<br />
+
 <p align="center">
     &ensp;<a href="#описание"><kbd>&ensp;<br />&ensp;&ensp;Описание&ensp;&ensp;<br />&ensp;</kbd></a>&ensp;
     &ensp;<a href="#особенности"><kbd>&ensp;<br />&ensp;&ensp;Особенности&ensp;&ensp;<br />&ensp;</kbd></a>&ensp;
@@ -25,15 +27,13 @@
     &ensp;<a href="#демо"><kbd>&ensp;<br />&ensp;&ensp;Демо&ensp;&ensp;<br />&ensp;</kbd></a>&ensp;
 </p>
 
-<br />
-
 ## Описание
 
 Этот репозиторий содержит мои дотфайлы которые я сам лично использую. Наверно не лучший райс потому что я не про, но по крайней мере это не какой-то фиговый Windows и к тому же хорошо подходит для эффективной работы
 
 README сейчас доступен на двух языках:
-* [English](README.en.md)
-* [Русский](README.ru.md)
+* [`English`](README.en.md)
+* [`Русский`](README.ru.md)
 
 ## Особенности
 
