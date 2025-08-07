@@ -95,21 +95,21 @@ It is recommended to reboot after the installation process done
 ## Demo
 
 <p align="center">
-    <img src="assets/demo_1.png" width="500" />
-    <img src="assets/demo_2.png" width="500" />
-    <img src="assets/demo_3.png" width="500" />
-    <img src="assets/demo_4.png" width="500" />
-    <img src="assets/demo_5.png" width="500" />
-    <img src="assets/demo_6.png" width="500" />
-    <img src="assets/demo_7.png" width="500" />
-    <img src="assets/demo_8.png" width="500" />
-    <img src="assets/demo_9.png" width="500" />
-    <img src="assets/demo_10.png" width="500" />
-    <img src="assets/demo_11.png" width="500" />
-    <img src="assets/demo_12.png" width="500" />
-    <img src="assets/demo_13.png" width="500" />
-    <img src="assets/demo_14.png" width="500" />
-    <img src="assets/demo_15.png" width="500" />
-    <img src="assets/demo_16.png" width="500" />
-    <img src="assets/demo_17.png" width="500" />
+    <img src="assets/demo_1.png" width="400" />
+    <img src="assets/demo_2.png" width="400" />
+    <img src="assets/demo_3.png" width="400" />
+    <img src="assets/demo_4.png" width="400" />
+    <img src="assets/demo_5.png" width="400" />
+    <img src="assets/demo_6.png" width="400" />
+    <img src="assets/demo_7.png" width="400" />
+    <img src="assets/demo_8.png" width="400" />
+    <img src="assets/demo_9.png" width="400" />
+    <img src="assets/demo_10.png" width="400" />
+    <img src="assets/demo_11.png" width="400" />
+    <img src="assets/demo_12.png" width="400" />
+    <img src="assets/demo_13.png" width="400" />
+    <img src="assets/demo_14.png" width="400" />
+    <img src="assets/demo_15.png" width="400" />
+    <img src="assets/demo_16.png" width="400" />
+    <img src="assets/demo_17.png" width="400" />
 </p>
