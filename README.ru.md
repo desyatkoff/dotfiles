@@ -1,7 +1,7 @@
 # Desyatkoff Dotfiles
 
 <img
-    src="assets/demo_17.png"
+    src="assets/demo_13.png"
     align="right"
     width="512"
 />
@@ -16,6 +16,14 @@
 * Статус бар: [`Waybar`](https://github.com/Alexays/Waybar)
 * Лаунчер: [`Rofi`](https://github.com/davatorium/rofi)
 * Док панель: [`Hydock`](https://github.com/desyatkoff/hydock)
+
+<p align="center">
+    &ensp;<a href="#описание"><kbd>&ensp;<br />&ensp;&ensp;Описание&ensp;&ensp;<br />&ensp;</kbd></a>&ensp;
+    &ensp;<a href="#особенности"><kbd>&ensp;<br />&ensp;&ensp;Особенности&ensp;&ensp;<br />&ensp;</kbd></a>&ensp;
+    &ensp;<a href="#установка"><kbd>&ensp;<br />&ensp;&ensp;Установка&ensp;&ensp;<br />&ensp;</kbd></a>&ensp;
+    &ensp;<a href="#сочетания-клавиш"><kbd>&ensp;<br />&ensp;&ensp;Сочетания клавиш&ensp;&ensp;<br />&ensp;</kbd></a>&ensp;
+    &ensp;<a href="#демо"><kbd>&ensp;<br />&ensp;&ensp;Демо&ensp;&ensp;<br />&ensp;</kbd></a>&ensp;
+</p>
 
 <br />
 

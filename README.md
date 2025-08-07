@@ -20,7 +20,6 @@
 <br />
 
 <p align="center">
-    &ensp;<a href="#desyatkoff-dotfiles"><kbd>&ensp;<br />&ensp;&ensp;Dotfiles&ensp;&ensp;<br />&ensp;</kbd></a>&ensp;
     &ensp;<a href="#description"><kbd>&ensp;<br />&ensp;&ensp;Description&ensp;&ensp;<br />&ensp;</kbd></a>&ensp;
     &ensp;<a href="#features"><kbd>&ensp;<br />&ensp;&ensp;Features&ensp;&ensp;<br />&ensp;</kbd></a>&ensp;
     &ensp;<a href="#installation"><kbd>&ensp;<br />&ensp;&ensp;Installation&ensp;&ensp;<br />&ensp;</kbd></a>&ensp;
