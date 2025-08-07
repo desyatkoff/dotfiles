@@ -94,20 +94,22 @@ README сейчас доступен на двух языках:
 
 ## Демо
 
-![](assets/demo_1.png)
-![](assets/demo_2.png)
-![](assets/demo_3.png)
-![](assets/demo_4.png)
-![](assets/demo_5.png)
-![](assets/demo_6.png)
-![](assets/demo_7.png)
-![](assets/demo_8.png)
-![](assets/demo_9.png)
-![](assets/demo_10.png)
-![](assets/demo_11.png)
-![](assets/demo_12.png)
-![](assets/demo_13.png)
-![](assets/demo_14.png)
-![](assets/demo_15.png)
-![](assets/demo_16.png)
-![](assets/demo_17.png)
+<p align="center">
+    <img src="assets/demo_1.png" width="500" />
+    <img src="assets/demo_2.png" width="500" />
+    <img src="assets/demo_3.png" width="500" />
+    <img src="assets/demo_4.png" width="500" />
+    <img src="assets/demo_5.png" width="500" />
+    <img src="assets/demo_6.png" width="500" />
+    <img src="assets/demo_7.png" width="500" />
+    <img src="assets/demo_8.png" width="500" />
+    <img src="assets/demo_9.png" width="500" />
+    <img src="assets/demo_10.png" width="500" />
+    <img src="assets/demo_11.png" width="500" />
+    <img src="assets/demo_12.png" width="500" />
+    <img src="assets/demo_13.png" width="500" />
+    <img src="assets/demo_14.png" width="500" />
+    <img src="assets/demo_15.png" width="500" />
+    <img src="assets/demo_16.png" width="500" />
+    <img src="assets/demo_17.png" width="500" />
+</p>
