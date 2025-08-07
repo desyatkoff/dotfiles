@@ -41,6 +41,9 @@ REQUIRED_PACKAGES=(
     "noto-fonts-emoji"
     "papirus-icon-theme"
     "peaclock"
+    "rofi"
+    "rofi-calc"
+    "rofi-emoji"
     "satty"
     "swaync"
     "swww"
@@ -48,10 +51,8 @@ REQUIRED_PACKAGES=(
     "ttf-jetbrains-mono-nerd"
     "tumbler"
     "waybar"
-    "waypaper"
     "wf-recorder"
     "wl-clipboard"
-    "wofi"
     "xdg-desktop-portal-hyprland"
     "zsh"
 )
@@ -186,6 +187,18 @@ fi
 
 yay -S --noconfirm --needed "${REQUIRED_PACKAGES[@]}"
 
+RUNZSH=no KEEP_ZSHRC=yes sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+
+git clone https://github.com/zdharma-continuum/fast-syntax-highlighting.git "$CLONE_DIR/fast-syntax-highlighting/"
+git clone https://github.com/Aloxaf/fzf-tab.git "$CLONE_DIR/fzf-tab/"
+git clone https://github.com/catppuccin/papirus-folders.git "$CLONE_DIR/papirus-folders/"
+
+curl -LO https://raw.githubusercontent.com/PapirusDevelopmentTeam/papirus-folders/master/papirus-folders
+
+chmod +x ./papirus-folders
+
+bash <(curl -fsSL https://raw.githubusercontent.com/desyatkoff/hydock/main/install.sh)
+
 log_ok "Packages installed\n"
 
 
@@ -222,31 +235,19 @@ done
 
 gsettings set org.gnome.desktop.wm.preferences button-layout ":"
 
-RUNZSH=no KEEP_ZSHRC=yes sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
-
-git clone https://github.com/zdharma-continuum/fast-syntax-highlighting.git "$CLONE_DIR/fast-syntax-highlighting/"
-
 cp -rv \
     "$CLONE_DIR/fast-syntax-highlighting/" \
     "$HOME/.oh-my-zsh/custom/plugins/fast-syntax-highlighting/"
 
 zsh fast-theme -v XDG:catppuccin-mocha || true
 
-git clone https://github.com/Aloxaf/fzf-tab.git "$CLONE_DIR/fzf-tab/"
-
 cp -rv \
     "$CLONE_DIR/fzf-tab/" \
     "$HOME/.oh-my-zsh/custom/plugins/fzf-tab/"
 
-git clone https://github.com/catppuccin/papirus-folders.git "$CLONE_DIR/papirus-folders/"
-
 cd "$CLONE_DIR/papirus-folders/"
 
 sudo cp -rv ./src/* /usr/share/icons/Papirus/
-
-curl -LO https://raw.githubusercontent.com/PapirusDevelopmentTeam/papirus-folders/master/papirus-folders
-
-chmod +x ./papirus-folders
 
 ./papirus-folders -C cat-mocha-blue --theme Papirus-Dark
 
