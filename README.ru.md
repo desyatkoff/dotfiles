@@ -82,7 +82,7 @@ README сейчас доступен на двух языках:
 * `Super` + `Shift` + `1` / `2` / `3` / `4` / `5` / `6` / `7` / `8` / `9` / `0` -> Переместить активное окно в воркспейс
 * `Super` + `S` -> Перейти в скрытый воркспейс
 * `Super` + `Shift` + `S` -> Переместить активное окно в скрытый воркспейс
-* Смотрите [`~/.config/hypr/hyprland/binds.conf`](home/config/hypr/hyprland/binds.conf) чтобы узнать больше
+* Смотрите [`~/.config/hypr/hyprland/binds.conf`](home/.config/hypr/hyprland/binds.conf) чтобы узнать больше
 
 ## Демо
 

@@ -91,7 +91,7 @@ It is recommended to reboot after the installation process done
 * `Super` + `Shift` + `1` / `2` / `3` / `4` / `5` / `6` / `7` / `8` / `9` / `0` -> Move active window to workspace
 * `Super` + `S` -> Go to special workspace
 * `Super` + `Shift` + `S` -> Move active window to special workspace
-* See [`~/.config/hypr/hyprland/binds.conf`](home/config/hypr/hyprland/binds.conf) for more
+* See [`~/.config/hypr/hyprland/binds.conf`](home/.config/hypr/hyprland/binds.conf) for more
 
 ## Demo
 
