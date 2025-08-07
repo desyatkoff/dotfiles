@@ -14,9 +14,12 @@
         }
     },
     "display": {
-        "separator": " -> ",
+        "separator": " │ -> │ ",
         "constants": [
-            "──────────────────────────────────────────────────"
+            "──────────────────────────────────────────────────",
+            "────────────╮    ╭────────────────────────────────",
+            "────────────╯    ╰────────────────────────────────",
+            "\u001b[91G",
         ]
     },
     "modules": [
@@ -27,8 +30,8 @@
         },
         {
             "type": "title",
-            "format": "# {user-name}@{host-name}",
-            "outputColor": "blue"
+            "format": "│ {#blue}{user-name}@{host-name}{#white}{$4}│",
+            "outputColor": "white"
         },
         {
             "type": "custom",
@@ -46,8 +49,8 @@
         },
         {
             "type": "custom",
-            "format": "# Fastfetch",
-            "outputColor": "blue"
+            "format": "│ {#blue}Fastfetch{#white}{$4}│",
+            "outputColor": "white"
         },
         {
             "type": "custom",
@@ -56,72 +59,72 @@
         },
         {
             "type": "custom",
-            "format": "╭{$1}╮",
+            "format": "╭{$2}╮",
             "outputColor": "white"
         },
         {
             "type": "os",
-            "key": " ╭{#blue} OS      ",
-            "keyColor": "white",
-            "outputColor": "blue"
+            "key": "│ {#blue} {#white}OS      ",
+            "format": "{2} {$4}│",
+            "keyColor": "white"
         },
         {
             "type": "board",
-            "key": " ├{#blue}󰚗 Board   ",
-            "keyColor": "white",
-            "outputColor": "blue"
+            "key": "│ {#blue}󰚗 {#white}Board   ",
+            "format": "{1} {3} {$4}│",
+            "keyColor": "white"
         },
         {
             "type": "kernel",
-            "key": " ├{#blue} Kernel  ",
-            "keyColor": "white",
-            "outputColor": "blue"
+            "key": "│ {#blue} {#white}Kernel  ",
+            "format": "{1} {2} {$4}│",
+            "keyColor": "white"
         },
         {
             "type": "packages",
-            "key": " ├{#blue}󰏗 Packages",
-            "keyColor": "white",
-            "outputColor": "blue"
+            "key": "│ {#blue}󰏗 {#white}Packages",
+            "format": "{1} {$4}│",
+            "keyColor": "white"
         },
         {
             "type": "shell",
-            "key": " ├{#blue} Shell   ",
-            "keyColor": "white",
-            "outputColor": "blue"
+            "key": "│ {#blue} {#white}Shell   ",
+            "format": "{1} {4} {$4}│",
+            "keyColor": "white"
         },
         {
             "type": "display",
-            "key": " ├{#blue}󰍹 Display ",
-            "keyColor": "white",
-            "outputColor": "blue"
+            "key": "│ {#blue}󰍹 {#white}Display ",
+            "format": "{1}x{2} @ {3} Hz {$4}│",
+            "keyColor": "white"
         },
         {
             "type": "wm",
-            "key": " ├{#blue} WM      ",
-            "keyColor": "white",
-            "outputColor": "blue"
+            "key": "│ {#blue} {#white}WM      ",
+            "format": "{1} {5} {$4}│",
+            "keyColor": "white"
         },
         {
             "type": "terminal",
-            "key": " ├{#blue} Terminal",
-            "keyColor": "white",
-            "outputColor": "blue"
+            "key": "│ {#blue} {#white}Terminal",
+            "format": "{1} {$4}│",
+            "keyColor": "white"
         },
         {
             "type": "cpu",
-            "key": " ├{#blue} CPU     ",
-            "keyColor": "white",
-            "outputColor": "blue"
+            "key": "│ {#blue} {#white}CPU     ",
+            "format": "{1} @ {7} {$4}│",
+            "keyColor": "white"
         },
         {
             "type": "gpu",
-            "key": " ╰{#blue}󰢮 GPU     ",
-            "keyColor": "white",
-            "outputColor": "blue"
+            "key": "│ {#blue}󰢮 {#white}GPU     ",
+            "format": "{1} {2} {$4}│",
+            "keyColor": "white"
         },
         {
             "type": "custom",
-            "format": "╰{$1}╯",
+            "format": "╰{$3}╯",
             "outputColor": "white"
         }
     ]

@@ -8,6 +8,7 @@ HYPRGAMEMODE=$(hyprctl getoption animations:enabled | awk 'NR==1{print $2}')
 if [ "$HYPRGAMEMODE" = 1 ]; then
     sleep 1
 
+    killall hydock
     killall waybar
     killall swww-daemon
 
@@ -24,23 +25,23 @@ if [ "$HYPRGAMEMODE" = 1 ]; then
         -a "Game Mode" \
         -i "qjoypad-tray" \
         "Game Mode" \
-        "Enabled Game Mode"
+        "Enabled"
 
-    sleep 4
-
-    killall swaync
+    swaync-client -dn
 
     exit
 else
-    waybar &
-    swaync &
     swww-daemon &
+    waybar &
+    hydock &
+
+    swaync-client -df
 
     notify-send \
         -a "Game Mode" \
         -i "qjoypad-tray" \
         "Game Mode" \
-        "Disabled Game Mode"
+        "Disabled"
 fi
 
 hyprctl reload

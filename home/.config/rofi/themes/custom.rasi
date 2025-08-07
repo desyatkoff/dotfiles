@@ -1,0 +1,115 @@
+* {
+    font: "Noto Sans 12";
+    text-color: #cdd6f4;
+}
+
+window {
+    width: 33%;
+    height: 44%;
+    border: 2px;
+    border-radius: 8px;
+    border-color: #89b4fa;
+    background-color: #1e1e2e;
+    padding: 16px;
+}
+
+mainbox {
+    background-color: #1e1e2e;
+    orientation: vertical;
+    spacing: 16px;
+}
+
+inputbar {
+    children: [prompt, entry];
+    background-color: #1e1e2e;
+    padding: 8px;
+    spacing: 8px;
+}
+
+prompt {
+    background-color: #89b4fa;
+    text-color: #1e1e2e;
+    border-radius: 8px;
+    padding: 8px 16px;
+}
+
+textbox {
+    background-color: #1e1e2e;
+}
+
+entry {
+    border-radius: 8px;
+    background-color: #313244;
+    placeholder: "Search";
+    padding: 8px 16px;
+    expand: true;
+}
+
+listview {
+    columns: 2;
+    background-color: #1e1e2e;
+    scrollbar: false;
+    spacing: 8px;
+}
+
+scrollbar {
+    handle-width: 0px;
+    handle-color: transparent;
+}
+
+element {
+    background-color: #1e1e2e;
+    border-radius: 8px;
+    padding: 8px;
+}
+
+element selected {
+    background-color: #313244;
+}
+
+element-icon {
+    size: 32px;
+    margin: 0px 8px 0px 0px;
+}
+
+element-icon selected {
+    background-color: #313244;
+}
+
+element-text, element-icon, mode-switcher {
+    background-color: #1e1e2e;
+}
+
+element-text {
+    padding: 4px 0px 0px 0px;
+}
+
+element-text selected {
+    background-color: #313244;
+}
+
+button {
+    background-color: #1e1e2e;
+    cursor: pointer;
+}
+
+button selected {
+    background-color: #1e1e2e;
+    text-color: #89b4fa;
+}
+
+sidebar {
+    background-color: #1e1e2e;
+    spacing: 8px;
+    padding: 8px;
+}
+
+sidebar button {
+    padding: 8px 16px;
+}
+
+sidebar button selected {
+    text-color: #89b4fa;
+    background-color: #313244;
+    border-radius: 8px;
+}

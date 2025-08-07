@@ -3,10 +3,16 @@
 # Screenshot script
 
 
-grim -l 0 -c - | satty --filename - --fullscreen --output-filename "$HOME/Pictures/Screenshots/$(date +'%Y-%m-%d_%H-%M-%S').png"
+SAVE_DIR="$HOME/Pictures/Screenshots"
+SAVE_NAME=$(date +'%Y-%m-%d_%H-%M-%S')
+SAVE_PATH="$SAVE_DIR/$SAVE_NAME.png"
 
-notify-send \
-    -a "Screenshot" \
-    -i "applets-screenshooter" \
-    "Screenshot" \
-    "New screenshot was taken"
+grim -l 0 -c - | satty --filename - --output-filename "$SAVE_PATH"
+
+if [ -f "$SAVE_PATH" ]; then
+    notify-send \
+        -a "Screenshot" \
+        -i "applets-screenshooter" \
+        "Screenshot" \
+        "$SAVE_PATH"
+fi

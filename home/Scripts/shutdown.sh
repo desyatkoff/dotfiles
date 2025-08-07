@@ -20,6 +20,7 @@ notify-send \
 sleep 2
 
 killall swaync
+killall hydock
 killall waybar
 
 swww img \

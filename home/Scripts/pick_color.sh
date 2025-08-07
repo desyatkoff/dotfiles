@@ -2,12 +2,12 @@
 
 # Color picker script
 
-color=$(hyprpicker --autocopy --lowercase-hex)
+COLOR=$(hyprpicker --autocopy --lowercase-hex)
 
-if [ -n "$color" ]; then
+if [ -n "$COLOR" ]; then
     notify-send \
         -a "Color Picker" \
         -i "color-select" \
         "Color Picker" \
-        "$color"
+        "$COLOR"
 fi

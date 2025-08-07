@@ -11,8 +11,6 @@ wl-paste --type image --watch cliphist store &
 swaync &
 swaync-client -df
 
-swayosd-server &
-
 if [[ "$(cut -d . -f 1 /proc/uptime)" -lt 60 ]]; then
     hyprlock
 
@@ -28,6 +26,8 @@ sh ~/Scripts/float_resize_center.sh &
 sleep 1.5
 
 waybar &
+
+hydock &
 
 sleep 1.5
 

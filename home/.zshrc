@@ -10,6 +10,7 @@ export TERM="kitty"
 export ZSH="$HOME/.oh-my-zsh"
 export GPG_TTY=$(tty)
 
+alias cal="cal --monday --iso --year"
 alias cp="cp -i"
 alias del="gio trash"
 alias ff="fastfetch"

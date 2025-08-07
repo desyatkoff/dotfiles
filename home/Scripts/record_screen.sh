@@ -46,7 +46,7 @@ start_recording() {
     fi
 
     output_file="$(date +%Y-%m-%d_%H-%M-%S).mp4"
-    output_path="$output_dir/$output_file"
+    output_path="$output_dir$output_file"
 
     echo "Target: $target"
     echo "Monitor: ${monitor_name:-N/A}"
@@ -127,23 +127,11 @@ stop_recording() {
 
     output_path=$(cat /tmp/last_recording_path 2>/dev/null)
 
-    if [ -z "$output_path" ] || [ ! -f "$output_path" ]; then
-        notify-send \
-            -a "Screen Recorder" \
-            -i "video-x-generic" \
-            "Screen Recorder" \
-            "Stopped recording"
-
-        exit 1
-    fi
-
     notify-send \
         -a "Screen Recorder" \
         -i "video-x-generic" \
-        --action="scriptAction:-xdg-open $(dirname "$output_path")=Open Directory" \
-        --action="scriptAction:-xdg-open $output_path=Play" \
         "Screen Recorder" \
-        "Stopped recording"
+        "$output_path"
 
     exit
 }

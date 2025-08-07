@@ -1,0 +1,16 @@
+[config]
+auto_hide = true
+chaos_mode = false
+ignore_applications = [
+    "rofi"
+]
+pinned_applications = [
+    "discord",
+    "firefox",
+    "kitty",
+    "krita",
+    "obsidian",
+    "steam",
+    "telegram",
+    "thunar"
+]

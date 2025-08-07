@@ -8,7 +8,7 @@ DAY=10
 EVENING=18
 NIGHT=22
 
-period="afternoon"
+period="day"
 
 update_period() {
     local current_hour=$(date +%H)

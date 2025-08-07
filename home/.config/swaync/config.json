@@ -80,36 +80,6 @@
                     "label": "󰊗",
                     "type": "normal",
                     "command": "sh ~/Scripts/gamemode.sh"
-                },
-                {
-                    "label": "󰌾",
-                    "type": "normal",
-                    "command": "hyprlock"
-                },
-                {
-                    "label": "",
-                    "type": "normal",
-                    "command": "systemctl hibernate"
-                },
-                {
-                    "label": "󰍃",
-                    "type": "normal",
-                    "command": "hyprctl dispatch exit"
-                },
-                {
-                    "label": "",
-                    "type": "normal",
-                    "command": "systemctl suspend"
-                },
-                {
-                    "label": "",
-                    "type": "normal",
-                    "command": "sh ~/Scripts/reboot.sh"
-                },
-                {
-                    "label": "",
-                    "type": "normal",
-                    "command": "sh ~/Scripts/shutdown.sh"
                 }
             ]
         },
