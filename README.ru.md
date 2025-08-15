@@ -1,7 +1,7 @@
 # Desyatkoff Dotfiles
 
 <img
-    src="assets/demo_13.png"
+    src="assets/1.png"
     align="right"
     width="500"
 />
@@ -37,7 +37,7 @@ README сейчас доступен на двух языках:
 
 ## Особенности
 
-* Простота и легковесность (~900 МБ использования ОЗУ на старте)
+* Простота и легковесность (примерно 800-900 МБ использования ОЗУ на старте)
 * Плавные анимации
 * Красивая цветовая палитра Catppuccin в вариации Mocha (нет, шутники, не "Моча", а "Мока")
 * Модульная структура
@@ -79,7 +79,8 @@ README сейчас доступен на двух языках:
 * `Print Screen` -> Сделать скриншот
 * `Super` + `V` -> Открыть буфер обмена
 * `Super` + `Alt` + `W` -> Открыть выбиралку обоев
-* `Super` + `Space` -> Запустить Rofi
+* `Super` + `Space` -> Запустить лаунчер приложений Rofi
+* `Super` + `X` -> Открыть меню управления питанием
 * `Super` + `W` -> Включить/Выключить Waybar
 * `Super` + `P` -> Запустить экранную пипетку
 * `Super` + `D` -> Включить/Выключить Hydock
@@ -95,21 +96,12 @@ README сейчас доступен на двух языках:
 ## Демо
 
 <p align="center">
-    <img src="assets/demo_1.png" width="400" />
-    <img src="assets/demo_2.png" width="400" />
-    <img src="assets/demo_3.png" width="400" />
-    <img src="assets/demo_4.png" width="400" />
-    <img src="assets/demo_5.png" width="400" />
-    <img src="assets/demo_6.png" width="400" />
-    <img src="assets/demo_7.png" width="400" />
-    <img src="assets/demo_8.png" width="400" />
-    <img src="assets/demo_9.png" width="400" />
-    <img src="assets/demo_10.png" width="400" />
-    <img src="assets/demo_11.png" width="400" />
-    <img src="assets/demo_12.png" width="400" />
-    <img src="assets/demo_13.png" width="400" />
-    <img src="assets/demo_14.png" width="400" />
-    <img src="assets/demo_15.png" width="400" />
-    <img src="assets/demo_16.png" width="400" />
-    <img src="assets/demo_17.png" width="400" />
+    <img src="assets/0.png" />
+    <img src="assets/1.png" />
+    <img src="assets/2.png" />
+    <img src="assets/3.png" />
+    <img src="assets/4.png" />
+    <img src="assets/5.png" />
+    <img src="assets/6.png" />
+    <img src="assets/7.png" />
 </p>

@@ -1,7 +1,7 @@
 # Desyatkoff Dotfiles
 
 <img
-    src="assets/demo_13.png"
+    src="assets/1.png"
     align="right"
     width="500"
 />
@@ -37,7 +37,7 @@ README is currently available in two languages:
 
 ## Features
 
-* Simple & lightweight (~900 MiB of RAM usage on idle)
+* Simple & lightweight (about 800-900 MiB of RAM usage on idle)
 * Smooth animations
 * Beautiful Catppuccin color palette with Mocha variation
 * Modular structure
@@ -79,7 +79,8 @@ It is recommended to reboot after the installation process done
 * `Print Screen` -> Take a screenshot
 * `Super` + `V` -> Open clipboard
 * `Super` + `Alt` + `W` -> Toggle wallpaper switcher
-* `Super` + `Space` -> Toggle Rofi
+* `Super` + `Space` -> Toggle Rofi app launcher
+* `Super` + `X` -> Toggle power menu
 * `Super` + `W` -> Toggle Waybar
 * `Super` + `P` -> Launch screen color picker
 * `Super` + `D` -> Toggle Hydock
@@ -95,21 +96,12 @@ It is recommended to reboot after the installation process done
 ## Demo
 
 <p align="center">
-    <img src="assets/demo_1.png" width="400" />
-    <img src="assets/demo_2.png" width="400" />
-    <img src="assets/demo_3.png" width="400" />
-    <img src="assets/demo_4.png" width="400" />
-    <img src="assets/demo_5.png" width="400" />
-    <img src="assets/demo_6.png" width="400" />
-    <img src="assets/demo_7.png" width="400" />
-    <img src="assets/demo_8.png" width="400" />
-    <img src="assets/demo_9.png" width="400" />
-    <img src="assets/demo_10.png" width="400" />
-    <img src="assets/demo_11.png" width="400" />
-    <img src="assets/demo_12.png" width="400" />
-    <img src="assets/demo_13.png" width="400" />
-    <img src="assets/demo_14.png" width="400" />
-    <img src="assets/demo_15.png" width="400" />
-    <img src="assets/demo_16.png" width="400" />
-    <img src="assets/demo_17.png" width="400" />
+    <img src="assets/0.png" />
+    <img src="assets/1.png" />
+    <img src="assets/2.png" />
+    <img src="assets/3.png" />
+    <img src="assets/4.png" />
+    <img src="assets/5.png" />
+    <img src="assets/6.png" />
+    <img src="assets/7.png" />
 </p>
