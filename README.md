@@ -29,7 +29,11 @@
 
 ## Description
 
-This repository stores my dotfiles that I personally use. Maybe not the best rice because I'm not pro but at least it's not trashy Windows and also it's good enough for efficient work
+This repository stores my dotfiles that I personally use
+
+Maybe not the best rice because I'm not pro but at least it's not trashy Windows and also it's good enough for efficient work
+
+Note that some files have my username hardcoded so they probably will not work for you unless you fix that
 
 README is currently available in two languages:
 * [`English`](README.en.md)
