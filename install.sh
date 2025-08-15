@@ -18,7 +18,6 @@ IFS=$'\n\t'
 
 REQUIRED_PACKAGES=(
     "btop"
-    "catppuccin-gtk-theme-mocha"
     "cava"
     "cliphist"
     "fastfetch"
@@ -135,9 +134,9 @@ if [[ "$confirm" =~ ^[Nn]$ ]]; then
 else
     if ! command -v sudo &>/dev/null; then
         if ! command -v doas &>/dev/null; then
-            log_warn "Could not find 'sudo' or 'doas'\n"
+            log_warn "Could not find \`sudo\` or \`doas\`\n"
 
-            log_fail "Aborting installation process. Please install 'sudo' or 'doas' first and then run this script again\n"
+            log_fail "Aborting installation process. Please install \`sudo\` or \`doas\` first and then run this script again\n"
 
             exit 1
         else
@@ -194,8 +193,11 @@ git clone https://github.com/Aloxaf/fzf-tab.git "$CLONE_DIR/fzf-tab/"
 git clone https://github.com/catppuccin/papirus-folders.git "$CLONE_DIR/papirus-folders/"
 
 curl -LO https://raw.githubusercontent.com/PapirusDevelopmentTeam/papirus-folders/master/papirus-folders
+curl -LsSO https://raw.githubusercontent.com/catppuccin/gtk/v1.0.3/install.py
 
 chmod +x ./papirus-folders
+
+mv -v install.py catppuccin_gtk_install.py
 
 bash <(curl -fsSL https://raw.githubusercontent.com/desyatkoff/hydock/main/install.sh)
 
@@ -253,6 +255,8 @@ sudo cp -rv ./src/* /usr/share/icons/Papirus/
 
 cd "$CLONE_DIR"
 
+python3 catppuccin_gtk_install.py mocha blue
+
 echo "[Service]" > "$CLONE_DIR/autologin.conf"
 echo "ExecStart=" >> "$CLONE_DIR/autologin.conf"
 echo "ExecStart=-/usr/bin/agetty --autologin $(logname) --noclear %I \$TERM" >> "$CLONE_DIR/autologin.conf"
@@ -280,7 +284,7 @@ log_info "Checking orphans"
 
 wait_dots
 
-orphans=$(yay -Qttdq 2>/dev/null || true)
+orphans=$(yay -Qdqtt 2>/dev/null || true)
 
 if [[ -n "$orphans" ]]; then
     log_info "Found orphaned packages\n"
@@ -308,7 +312,7 @@ fi
 
 log_ok "Done\n"
 
-log_ask "Clear 'yay' cache completely? [y/N] "
+log_ask "Clear \`yay\` cache completely? [y/N] "
 
 read -rp "" clear_cache
 
