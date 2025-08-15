@@ -21,8 +21,6 @@ fi
 
 sh ~/Scripts/dynamic_wallpapers.sh &
 
-sh ~/Scripts/float_resize_center.sh &
-
 sleep 1.5
 
 waybar &

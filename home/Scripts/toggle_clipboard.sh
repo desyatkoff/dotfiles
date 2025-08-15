@@ -6,5 +6,5 @@
 if pgrep -x "rofi" > /dev/null; then
     killall rofi
 else
-    cliphist list | rofi -dmenu | cliphist decode | wl-copy
+    cliphist list | rofi -dmenu -p "󱉧  Clipboard" | cliphist decode | wl-copy
 fi

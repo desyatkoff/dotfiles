@@ -40,7 +40,7 @@ textbox {
 entry {
     border-radius: 8px;
     background-color: #313244;
-    placeholder: "Search";
+    cursor: text;
     padding: 8px 16px;
     expand: true;
 }
@@ -69,7 +69,6 @@ element selected {
 
 element-icon {
     size: 32px;
-    margin: 0px 8px 0px 0px;
 }
 
 element-icon selected {

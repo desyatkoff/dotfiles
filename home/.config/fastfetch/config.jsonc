@@ -107,7 +107,7 @@
         {
             "type": "terminal",
             "key": "│ {#blue} {#white}Terminal",
-            "format": "{1} {$4}│",
+            "format": "{1} {6} {$4}│",
             "keyColor": "white"
         },
         {

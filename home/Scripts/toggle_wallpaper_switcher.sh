@@ -6,7 +6,7 @@
 if pgrep -x "rofi" > /dev/null; then
     killall rofi
 else
-    WP="$(find ~/Pictures/Wallpapers -type f | xargs -n1 basename | rofi -dmenu | cut -d ' ' -f 1 | tr -d '\n')"
+    WP="$(find ~/Pictures/Wallpapers -type f | xargs -n1 basename | rofi -dmenu -p "  Wallpaper" | cut -d ' ' -f 1 | tr -d '\n')"
 
     if [ -n "$WP" ]; then
         swww img --transition-type=center --transition-step=255 --transition-duration=1 --transition-fps=60 ~/Pictures/Wallpapers/$WP
@@ -14,7 +14,6 @@ else
         notify-send \
             -a "Wallpaper" \
             -i "preferences-desktop-wallpaper" \
-            -e \
             "Wallpaper" \
             "$WP"
     fi

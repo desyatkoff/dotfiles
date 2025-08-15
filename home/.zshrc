@@ -2,13 +2,20 @@ if [[ $(tty) =~ /dev/tty[0-9]+ ]]; then
     exec bash
 fi
 
-export PATH="$PATH:$HOME/bin:$HOME/.local/bin:/usr/local/bin:$HOME/.cargo/bin"
-export LANG="en_US.UTF-8"
 export EDITOR="helix"
+export FZF_DEFAULT_OPTS=" \
+    --color=bg+:#313244,bg:#1e1e2e,spinner:#f5e0dc,hl:#f38ba8 \
+    --color=fg:#cdd6f4,header:#f38ba8,info:#cba6f7,pointer:#f5e0dc \
+    --color=marker:#b4befe,fg+:#cdd6f4,prompt:#cba6f7,hl+:#f38ba8 \
+    --color=selected-bg:#45475a \
+    --color=border:#6c7086,label:#cdd6f4 \
+"
+export GPG_TTY=$(tty)
+export LANG="en_US.UTF-8"
+export PATH="$PATH:$HOME/bin:$HOME/.local/bin:/usr/local/bin:$HOME/.cargo/bin"
 export SHELL="/usr/bin/zsh"
 export TERM="kitty"
 export ZSH="$HOME/.oh-my-zsh"
-export GPG_TTY=$(tty)
 
 alias cal="cal --monday --iso --year"
 alias cp="cp -i"

@@ -103,12 +103,6 @@ start_recording() {
 
     echo "Recording started. Saving to $output_path"
     echo "$output_path" >/tmp/last_recording_path
-
-    notify-send \
-        -a "Screen Recorder" \
-        -i "video-x-generic" \
-        "Screen Recorder" \
-        "Started recording"
 }
 
 stop_recording() {

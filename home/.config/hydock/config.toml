@@ -1,9 +1,13 @@
 [config]
+app_launcher_command = "~/Scripts/toggle_app_launcher.sh"
+app_launcher_icon = "applications-all-symbolic"
 auto_hide = true
 chaos_mode = false
+dock_position = "bottom"
 ignore_applications = [
     "rofi"
 ]
+override_app_icons = { "thunar" = "system-file-manager" }
 pinned_applications = [
     "discord",
     "firefox",
@@ -14,3 +18,5 @@ pinned_applications = [
     "telegram",
     "thunar"
 ]
+show_app_launcher = true
+show_separator = true
