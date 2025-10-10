@@ -1,7 +1,7 @@
 # Desyatkoff Dotfiles
 
 <img
-    src="assets/1.png"
+    src="assets/2.png"
     align="right"
     width="500"
 />
@@ -99,7 +99,6 @@ It is recommended to reboot after the installation process done
 ## Demo
 
 <p align="center">
-    <img src="assets/0.png" />
     <img src="assets/1.png" />
     <img src="assets/2.png" />
     <img src="assets/3.png" />
