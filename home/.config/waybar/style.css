@@ -7,6 +7,14 @@
     border-radius: 2px;
 }
 
+tooltip {
+    color: #cdd6f4;
+    padding: 0 8px;
+    background: #1e1e2e;
+    border: 2px solid #11111b;
+    border-radius: 2px;
+}
+
 #waybar {
     background: #1e1e2e;
     border-bottom: 2px solid #11111b;

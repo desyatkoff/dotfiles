@@ -3,14 +3,18 @@
 # General system cleanup script
 
 
-if ! command -v sudo &>/dev/null; then
-    alias sudo="doas"
+if ! command -v yay &>/dev/null; then
+    if ! command -v sudo &>/dev/null; then
+        alias yay="doas pacman"
+    else
+        alias yay="sudo pacman"
+    fi
 fi
 
-sudo pacman -Suy
+yay -Suy
 
-for package in $(pacman -Qdqtt); do
-    sudo pacman -Rnsu "$package" --confirm
+for package in $(yay -Qdqtt); do
+    yay -Rnsu "$package" --confirm
 done
 
-sudo pacman -Scc
+yay -Scc

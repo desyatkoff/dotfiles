@@ -353,3 +353,4 @@ x-scheme-handler/chrome=firefox.desktop;
 x-scheme-handler/https=firefox.desktop;
 x-scheme-handler/http=firefox.desktop;
 x-scheme-handler/trash=thunar.desktop;
+x-scheme-handler/ror2mm=r2modman.desktop

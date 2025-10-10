@@ -26,6 +26,7 @@ REQUIRED_PACKAGES=(
     "grim"
     "gvfs"
     "helix"
+    "hydock"
     "hyprland"
     "hyprlock"
     "hyprpicker"
@@ -198,8 +199,6 @@ curl -LsSO https://raw.githubusercontent.com/catppuccin/gtk/v1.0.3/install.py
 chmod +x ./papirus-folders
 
 mv -v install.py catppuccin_gtk_install.py
-
-bash <(curl -fsSL https://raw.githubusercontent.com/desyatkoff/hydock/main/install.sh)
 
 log_ok "Packages installed\n"
 

@@ -2,130 +2,112 @@
     "$schema": "https://github.com/fastfetch-cli/fastfetch/raw/dev/doc/json_schema.json",
     "logo": {
         "source": "arch2",
-        "padding": {
-            "left": 1,
-            "right": 1,
-            "top": 0,
-            "bottom": 0
-        },
         "color": {
             "1": "blue",
             "2": "blue"
+        },
+        "padding": {
+            "top": 0,
+            "bottom": 0,
+            "left": 0,
+            "right": 2
         }
     },
     "display": {
-        "separator": " │ -> │ ",
         "constants": [
-            "──────────────────────────────────────────────────",
-            "────────────╮    ╭────────────────────────────────",
-            "────────────╯    ╰────────────────────────────────",
-            "\u001b[91G",
+            "\u001b[91G"
         ]
     },
     "modules": [
         {
             "type": "custom",
-            "format": "╭{$1}╮",
-            "outputColor": "white"
+            "format": "{#white}╭──────────────────────────────────────────────────╮"
         },
         {
             "type": "title",
-            "format": "│ {#blue}{user-name}@{host-name}{#white}{$4}│",
-            "outputColor": "white"
+            "format": "{#white}│ {#blue}{user-name}{#white}@{#blue}{host-name}{$1}{#white}│"
         },
         {
             "type": "custom",
-            "format": "╰{$1}╯",
-            "outputColor": "white"
-        },
-        {
-            "type": "custom",
-            "format": "        {#black}󰊠    {#red}󰊠    {#green}󰊠    {#yellow}󰮯    {#blue}󰊠    {#magenta}󰊠    {#cyan}󰊠    {#white}󰊠        "
-        },
-        {
-            "type": "custom",
-            "format": "╭{$1}╮",
-            "outputColor": "white"
-        },
-        {
-            "type": "custom",
-            "format": "│ {#blue}Fastfetch{#white}{$4}│",
-            "outputColor": "white"
-        },
-        {
-            "type": "custom",
-            "format": "╰{$1}╯",
-            "outputColor": "white"
-        },
-        {
-            "type": "custom",
-            "format": "╭{$2}╮",
-            "outputColor": "white"
+            "format": "{#white}├──────────────────────────────────────────────────┤"
         },
         {
             "type": "os",
-            "key": "│ {#blue} {#white}OS      ",
-            "format": "{2} {$4}│",
-            "keyColor": "white"
-        },
-        {
-            "type": "board",
-            "key": "│ {#blue}󰚗 {#white}Board   ",
-            "format": "{1} {3} {$4}│",
-            "keyColor": "white"
+            "key": "{#white}│ {#blue} OS",
+            "format": "{pretty-name}{$1}{#white}│"
         },
         {
             "type": "kernel",
-            "key": "│ {#blue} {#white}Kernel  ",
-            "format": "{1} {2} {$4}│",
-            "keyColor": "white"
+            "key": "{#white}│ {#blue} Kernel",
+            "format": "{release}{$1}{#white}│"
+        },
+        {
+            "type": "uptime",
+            "key": "{#white}│ {#blue} Uptime",
+            "format": "{formatted}{$1}{#white}│"
         },
         {
             "type": "packages",
-            "key": "│ {#blue}󰏗 {#white}Packages",
-            "format": "{1} {$4}│",
-            "keyColor": "white"
+            "key": "{#white}│ {#blue}󰏖 Packages",
+            "format": "{all}{$1}{#white}│"
         },
         {
             "type": "shell",
-            "key": "│ {#blue} {#white}Shell   ",
-            "format": "{1} {4} {$4}│",
-            "keyColor": "white"
+            "key": "{#white}│ {#blue} Shell",
+            "format": "{pretty-name} {version}{$1}{#white}│"
         },
         {
             "type": "display",
-            "key": "│ {#blue}󰍹 {#white}Display ",
-            "format": "{1}x{2} @ {3} Hz {$4}│",
-            "keyColor": "white"
+            "key": "{#white}│ {#blue}󰍹 Resolution",
+            "format": "{width}x{height}{$1}{#white}│"
         },
         {
             "type": "wm",
-            "key": "│ {#blue} {#white}WM      ",
-            "format": "{1} {5} {$4}│",
-            "keyColor": "white"
+            "key": "{#white}│ {#blue} WM",
+            "format": "{pretty-name} {version}{$1}{#white}│"
+        },
+        {
+            "type": "theme",
+            "key": "{#white}│ {#blue}󰉼 Theme",
+            "format": "{theme2}{$1}{#white}│"
+        },
+        {
+            "type": "icons",
+            "key": "{#white}│ {#blue} Icons",
+            "format": "{icons2}{$1}{#white}│"
         },
         {
             "type": "terminal",
-            "key": "│ {#blue} {#white}Terminal",
-            "format": "{1} {6} {$4}│",
-            "keyColor": "white"
+            "key": "{#white}│ {#blue} Terminal",
+            "format": "{pretty-name} {version}{$1}{#white}│"
+        },
+        {
+            "type": "terminalfont",
+            "key": "{#white}│ {#blue} Terminal Font",
+            "format": "{/name}{-}{/}{name}{?size} {size}{?}{$1}{#white}│"
         },
         {
             "type": "cpu",
-            "key": "│ {#blue} {#white}CPU     ",
-            "format": "{1} @ {7} {$4}│",
-            "keyColor": "white"
+            "key": "{#white}│ {#blue} CPU",
+            "format": "{name} ({cores-physical}) @ {7}{$1}{#white}│"
         },
         {
             "type": "gpu",
-            "key": "│ {#blue}󰢮 {#white}GPU     ",
-            "format": "{1} {2} {$4}│",
-            "keyColor": "white"
+            "key": "{#white}│ {#blue}󰾲 GPU",
+            "format": "{name}{$1}{#white}│"
+        },
+        {
+            "type": "memory",
+            "key": "{#white}│ {#blue} Memory",
+            "format": "{used} / {total}{$1}{#white}│"
         },
         {
             "type": "custom",
-            "format": "╰{$3}╯",
-            "outputColor": "white"
+            "format": "{#white}│       {#black}󰊠    {#red}󰊠    {#green}󰊠    {#yellow}󰮯    {#blue}󰊠    {#magenta}󰊠    {#cyan}󰊠    {#white}󰊠       {$1}{#white}│"
+        },
+        {
+            "type": "custom",
+            "format": "{#white}╰──────────────────────────────────────────────────╯"
         }
     ]
 }

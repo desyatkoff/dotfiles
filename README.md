@@ -84,7 +84,6 @@ It is recommended to reboot after the installation process done
 * `Super` + `V` -> Open clipboard
 * `Super` + `Alt` + `W` -> Toggle wallpaper switcher
 * `Super` + `Space` -> Toggle Rofi app launcher
-* `Super` + `X` -> Toggle power menu
 * `Super` + `W` -> Toggle Waybar
 * `Super` + `P` -> Launch screen color picker
 * `Super` + `D` -> Toggle Hydock
