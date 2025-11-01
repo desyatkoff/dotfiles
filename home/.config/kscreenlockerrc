@@ -1,0 +1,7 @@
+[Daemon]
+Autolock=false
+Timeout=0
+
+[Greeter][Wallpaper][org.kde.image][General]
+Image=/home/desyatkoff/Pictures/Wallpapers/aerial_photo_of_brown_mountains.png
+PreviewImage=/home/desyatkoff/Pictures/Wallpapers/aerial_photo_of_brown_mountains.png

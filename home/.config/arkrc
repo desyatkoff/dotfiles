@@ -1,0 +1,8 @@
+[General]
+LockSidebar=true
+ShowSidebar=true
+ShowWelcomeScreenOnStartup=false
+
+[MainWindow]
+MenuBar=Disabled
+StatusBar=Disabled

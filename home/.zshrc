@@ -18,17 +18,12 @@ export TERM="kitty"
 export ZSH="$HOME/.oh-my-zsh"
 
 alias cal="cal --monday --iso --year"
-alias cp="cp -i"
-alias del="gio trash"
+alias eza="eza --long --icons always --no-quotes --all --sort name --group-directories-first --binary --header --no-user"
 alias ff="fastfetch"
 alias hx="helix"
-alias lsd="lsd --all --blocks 'permission,size,name' --group-directories-first"
-alias mv="mv -i"
-alias peaclock="peaclock --config-dir ~/.config/peaclock/"
 alias please="sudo"
 alias pls="sudo"
-alias rm="rm -ri"
-alias tree="tree -a -N --dirsfirst --sort name"
+alias tree="\eza --tree --icons always --no-quotes --all --sort name --group-directories-first --binary --header --no-user"
 alias weather="curl 'https://wttr.in'"
 alias weather3="curl 'https://wttr.in?format=3'"
 alias wttr="curl 'https://wttr.in'"
@@ -64,7 +59,7 @@ zstyle ':completion:*:git-checkout:*' sort false
 zstyle ':completion:*:descriptions' format '[%d]'
 zstyle ':completion:*' list-colors ${(s.:.)LS_COLORS}
 zstyle ':completion:*' menu no
-zstyle ':fzf-tab:complete:cd:*' fzf-preview 'lsd -1 --color=always $realpath'
+zstyle ':fzf-tab:complete:cd:*' fzf-preview 'eza --oneline --color always --icons always --no-quotes --all --sort name --group-directories-first $realpath'
 zstyle ':fzf-tab:*' fzf-flags --color=fg:1,fg+:2
 zstyle ':fzf-tab:*' use-fzf-default-opts yes
 zstyle ':fzf-tab:*' switch-group '<' '>'
