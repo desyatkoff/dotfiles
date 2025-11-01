@@ -6,7 +6,7 @@
 <img
     src="assets/1.png"
     align="right"
-    width="480"
+    width="400"
 />
 
 * Operating System: [`Arch Linux`](https://archlinux.org)
