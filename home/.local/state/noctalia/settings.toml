@@ -1,0 +1,188 @@
+config_version = 12
+
+[audio]
+enable_sounds = true
+
+[bar.default]
+background_opacity = 0.79999998211860657
+capsule_thickness = 0.79999998584389687
+end = [ "tray", "notifications", "network", "volume", "brightness", "session" ]
+margin_ends = 8
+padding = 16
+radius = 8
+start = [ "launcher", "workspaces" ]
+thickness = 32
+widget_spacing = 8
+
+    [bar.default.dead_zone.actions]
+    right = "none"
+
+[brightness]
+enable_ddcutil = true
+
+[calendar]
+enabled = true
+
+[control_center]
+sidebar_section = "none"
+width = 800
+
+[desktop_widgets]
+enabled = false
+
+[dock]
+background_opacity = 0.79999998211860657
+icon_size = 32
+inactive_opacity = 0.99999997764825821
+inactive_scale = 1.0
+item_spacing = 8
+magnification_scale = 1.5000000074505806
+main_axis_padding = 8
+reserve_space = false
+show_dots = true
+show_instance_count = false
+smart_auto_hide = true
+
+[location]
+address = "Perm, Russia"
+
+[lockscreen]
+blurred_desktop = true
+
+[lockscreen_widgets]
+enabled = false
+schema_version = 2
+widget_order = [ "lockscreen-login-box@DVI-D-1" ]
+
+    [lockscreen_widgets.grid]
+    cell_size = 16
+    major_interval = 4
+    visible = true
+
+    [lockscreen_widgets.widget."lockscreen-login-box@DVI-D-1"]
+    box_height = 196.0
+    box_width = 810.0
+    cx = 960.0
+    cy = 898.0
+    output = "DVI-D-1"
+    rotation = 0.0
+    type = "login_box"
+
+        [lockscreen_widgets.widget."lockscreen-login-box@DVI-D-1".settings]
+        background_color = "surface_variant"
+        background_opacity = 0.88
+        background_radius = 12.0
+        center_password_text = false
+        input_opacity = 1.0
+        input_radius = 6.0
+        layout = "regular"
+        show_caps_lock = true
+        show_keyboard_layout = true
+        show_login_button = true
+        show_media = true
+        show_session_buttons = true
+        show_unlock_hint = true
+        show_weather = true
+
+[notification]
+background_opacity = 0.79999998211860657
+
+[osd]
+background_opacity = 0.79999998211860657
+
+[plugin_settings."noctalia/kaomoji"]
+notify_on_copy = false
+
+[plugin_settings."noctalia/wallhaven"]
+browser_open_near_click = true
+browser_placement = "floating"
+browser_position = "center"
+
+[plugins]
+enabled = [ "noctalia/kaomoji", "noctalia/wallhaven" ]
+
+[shell]
+avatar_path = "/var/lib/AccountsService/icons/desyatkoff"
+external_ip_enabled = true
+font_family = "Noto Sans"
+niri_overview_type_to_launch_enabled = true
+password_style = "random"
+polkit_agent = true
+screen_time_enabled = true
+
+    [shell.greeter_sync]
+    auto_sync = true
+
+    [shell.launcher]
+    sort_by_usage = false
+
+    [shell.panel]
+    control_center_position = "center"
+    list_item_background = true
+    open_near_click_control_center = true
+    open_near_click_session = true
+    session_placement = "floating"
+    session_position = "center"
+    transparency_mode = "soft"
+    wallpaper_placement = "floating"
+    wallpaper_position = "center"
+
+    [shell.screenshot]
+    directory = "~/Pictures/Screenshots"
+    filename_pattern = "%Y-%m-%d_%H-%M-%S"
+    show_cursor = true
+
+    [shell.shadow]
+    alpha = 0.79999998211860657
+    direction = "center"
+
+[theme]
+builtin = "Catppuccin"
+community_palette = "Catppuccin Mocha Blue"
+mode = "dark"
+source = "community"
+wallpaper_scheme = "m3-content"
+
+[wallpaper]
+edge_smoothness = 0.99999997764825821
+transition = [ "disc" ]
+transition_on_startup = true
+
+    [wallpaper.default]
+    path = "/home/desyatkoff/Pictures/Wallpapers/wallhaven_k7v9yq.jpg"
+
+    [wallpaper.last]
+    path = "/home/desyatkoff/Pictures/Wallpapers/wallhaven_k7v9yq.jpg"
+
+    [wallpaper.monitors.DVI-D-1]
+    path = "/home/desyatkoff/Pictures/Wallpapers/wallhaven_k7v9yq.jpg"
+
+[widget.clock]
+format = "{:%b %d, %H:%M}"
+tooltip_format = "{:%Y-%m-%d, %H:%M:%S}"
+
+[widget.control-center]
+custom_image = "/mnt/sdb1/desyatkoff/Random Shit/archlinux.svg"
+custom_image_colorize = true
+icon_color = "primary"
+scale = 1.5
+
+[widget.launcher]
+custom_image = "/mnt/sdb1/desyatkoff/Random Shit/archlinux.svg"
+custom_image_colorize = true
+glyph = ""
+icon_color = "primary"
+scale = 1.25
+
+[widget.session]
+custom_image_colorize = true
+icon_color = "error"
+
+[widget.tray]
+drawer = true
+drawer_columns = 5
+
+[widget.workspaces]
+active_pill_size = 2.0
+scale = 0.75
+show_labels = false

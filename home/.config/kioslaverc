@@ -1,7 +1,0 @@
-[Proxy]
-Authmode=Settings
-ProxyType=Settings
-ftpProxy=Settings
-httpProxy=Settings
-httpsProxy=Settings
-socksProxy=Settings

@@ -7,117 +7,110 @@
             "2": "blue"
         },
         "padding": {
-            "top": 1,
-            "bottom": 0,
             "left": 0,
-            "right": 2
+            "right": 1
         }
     },
     "display": {
         "constants": [
-            "\u001b[91G"
+            "\u001b[90G"
         ]
     },
     "modules": [
         {
             "type": "custom",
-            "format": "{#white}╭──────────────────────────────────────────────────╮"
+            "format": "╭──────────────────────────────────────────────────╮"
         },
         {
             "type": "title",
-            "format": "{#white}│ {#blue}{user-name}{#white}@{#blue}{host-name}{$1}{#white}│"
+            "format": "│ {#blue}{user-name}{#}@{#blue}{host-name}{$1}{#}│"
         },
         {
             "type": "custom",
-            "format": "{#white}├──────────────────────────────────────────────────┤"
+            "format": "├──────────────────────────────────────────────────┤"
         },
         {
             "type": "os",
-            "key": "{#white}│ {#blue} OS",
-            "format": "{pretty-name} {arch}{$1}{#white}│"
+            "key": "{#}│ {#blue} OS",
+            "format": "{pretty-name} {arch}{$1}│"
         },
         {
             "type": "kernel",
-            "key": "{#white}│ {#blue} Kernel",
-            "format": "{release}{$1}{#white}│"
+            "key": "{#}│ {#blue} Kernel",
+            "format": "{release}{$1}│"
         },
         {
             "type": "uptime",
-            "key": "{#white}│ {#blue} Uptime",
-            "format": "{formatted}{$1}{#white}│"
+            "key": "{#}│ {#blue} Uptime",
+            "format": "{formatted}{$1}│"
         },
         {
             "type": "packages",
-            "key": "{#white}│ {#blue}󰏖 Packages",
-            "format": "{pacman} (pacman){$1}{#white}│"
+            "key": "{#}│ {#blue}󰏖 Packages",
+            "format": "{pacman} (pacman){$1}│"
         },
         {
             "type": "shell",
-            "key": "{#white}│ {#blue} Shell",
-            "format": "{pretty-name} {version}{$1}{#white}│"
+            "key": "{#}│ {#blue} Shell",
+            "format": "{pretty-name} {version}{$1}│"
         },
         {
             "type": "display",
-            "key": "{#white}│ {#blue}󰍹 Resolution",
-            "format": "{width}x{height}{$1}{#white}│"
-        },
-        {
-            "type": "de",
-            "key": "{#white}│ {#blue}󰧨 DE",
-            "format": "{pretty-name} {version}{$1}{#white}│"
+            "key": "{#}│ {#blue}󰍹 Resolution",
+            "format": "{width}x{height}{$1}│"
         },
         {
             "type": "wm",
-            "key": "{#white}│ {#blue} WM",
-            "format": "{pretty-name} ({protocol-name}) {version}{$1}{#white}│"
+            "key": "{#}│ {#blue} WM",
+            "format": "{pretty-name} {version} ({protocol-name}){$1}│"
         },
         {
             "type": "theme",
-            "key": "{#white}│ {#blue}󰉼 Theme",
-            "format": "{theme1}{$1}{#white}│"
+            "key": "{#}│ {#blue}󰉼 Theme",
+            "format": "{theme1}{$1}│"
         },
         {
             "type": "icons",
-            "key": "{#white}│ {#blue} Icons",
-            "format": "{icons1}{$1}{#white}│"
+            "key": "{#}│ {#blue} Icons",
+            "format": "{icons1}{$1}│"
         },
         {
             "type": "terminal",
-            "key": "{#white}│ {#blue} Terminal",
-            "format": "{pretty-name} {version}{$1}{#white}│"
+            "key": "{#}│ {#blue} Terminal",
+            "format": "{pretty-name} {version}{$1}│"
         },
         {
             "type": "terminalfont",
-            "key": "{#white}│ {#blue} Terminal Font",
-            "format": "{/name}{-}{/}{name}{?size} {size}{?}{$1}{#white}│"
+            "key": "{#}│ {#blue} Terminal Font",
+            "format": "{/name}{-}{/}{name}{?size} {size}{?}{$1}│"
         },
         {
             "type": "cpu",
-            "key": "{#white}│ {#blue} CPU",
-            "format": "{name} ({cores-physical}) @ {7}{$1}{#white}│"
+            "key": "{#}│ {#blue} CPU",
+            "format": "{name} ({cores-physical}) @ {7}{$1}│"
         },
         {
             "type": "gpu",
-            "key": "{#white}│ {#blue}󰾲 GPU",
-            "format": "{name}{$1}{#white}│"
+            "key": "{#}│ {#blue}󰾲 GPU",
+            "format": "{name}{$1}│"
         },
         {
             "type": "memory",
-            "key": "{#white}│ {#blue} Memory",
-            "format": "{used} / {total}{$1}{#white}│"
+            "key": "{#}│ {#blue} Memory",
+            "format": "{used} / {total}{$1}│"
         },
         {
             "type": "swap",
-            "key": "{#white}│ {#blue}󰯍 Swap",
-            "format": "{used} / {total}{$1}{#white}│"
+            "key": "{#}│ {#blue}󰯍 Swap",
+            "format": "{used} / {total}{$1}│"
         },
         {
             "type": "custom",
-            "format": "{#white}│     {#black}󰊠    {#red}󰊠    {#green}󰊠    {#yellow}󰮯    {#blue}󰊠    {#magenta}󰊠    {#cyan}󰊠    {#white}󰊠     {$1}{#white}│"
+            "format": "╰──────────────────────────────────────────────────╯"
         },
         {
             "type": "custom",
-            "format": "{#white}╰──────────────────────────────────────────────────╯"
+            "format": "        {#light_black}󰊠    {#red}󰊠    {#green}󰊠    {#yellow}󰮯    {#blue}󰊠    {#magenta}󰊠    {#cyan}󰊠    {#white}󰊠        "
         }
     ]
 }

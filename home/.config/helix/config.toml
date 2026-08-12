@@ -1,11 +1,11 @@
 theme = "catppuccin_mocha"
 
 [editor]
-scrolloff = 0
+scrolloff = 3
 mouse = true
 default-yank-register = "\""
 middle-click-paste = true
-scroll-lines = 4
+scroll-lines = 3
 shell = ["sh", "-c"]
 line-number = "absolute"
 cursorline = true
@@ -19,31 +19,37 @@ idle-timeout = 250
 completion-timeout = 250
 preview-completion-insert = true
 completion-trigger-len = 1
-completion-replace = true
+completion-replace = false
 auto-info = true
 true-color = false
 undercurl = false
 rulers = []
-bufferline = "never"
-color-modes = false
+bufferline = "always"
+color-modes = true
 text-width = 99
 workspace-lsp-roots = []
-default-line-ending = "lf"
+default-line-ending = "native"
 insert-final-newline = true
+atomic-save = true
+trim-final-newlines = false
+trim-trailing-whitespace = true
 popup-border = "all"
-indent-heuristic = "simple"
+indent-heuristic = "hybrid"
 jump-label-alphabet = "abcdefghijklmnopqrstuvwxyz"
-end-of-line-diagnostics = "disable"
+end-of-line-diagnostics = "hint"
 clipboard-provider = "wayland"
+editor-config = true
 
 [editor.statusline]
-left = ["mode", "spinner"]
-center = ["file-base-name", "read-only-indicator", "file-modification-indicator"]
-right = ["diagnostics", "position", "file-type"]
+left = ["mode"]
+center = ["file-name", "read-only-indicator", "file-modification-indicator"]
+right = ["diagnostics", "selections", "position", "file-type"]
 separator = "|"
 mode.normal = "NORMAL"
 mode.insert = "INSERT"
 mode.select = "SELECT"
+diagnostics = ["warning", "error"]
+workspace-diagnostics = ["warning", "error"]
 
 [editor.lsp]
 enable = true
@@ -51,6 +57,7 @@ display-messages = true
 display-progress-messages = true
 auto-signature-help = true
 display-inlay-hints = true
+display-color-swatches = true
 display-signature-help-docs = true
 snippets = true
 goto-reference-include-declaration = true
@@ -69,6 +76,7 @@ ignore = true
 git-ignore = true
 git-global = true
 git-exclude = true
+max-depth = 99
 
 [editor.auto-pairs]
 "(" = ")"
@@ -110,7 +118,7 @@ skip-levels = 0
 
 [editor.soft-wrap]
 enable = true
-max-wrap = 24
+max-wrap = 99
 max-indent-retain = 0
 wrap-indicator = ""
 
@@ -122,5 +130,5 @@ supersede-menu = false
 cursor-line = "info"
 other-lines = "info"
 prefix-len = 1
-max-wrap = 24
-max-diagnostics = 8
+max-wrap = 20
+max-diagnostics = 10
