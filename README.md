@@ -14,7 +14,7 @@
 * Terminal: [`Kitty`](https://sw.kovidgoyal.net/kitty)
 * Terminal Font: [`JetBrains Mono`](https://www.jetbrains.com/lp/mono)
 
-<br />
+## Demo
 
 <p align="center">
     <img src="assets/0.png" />
