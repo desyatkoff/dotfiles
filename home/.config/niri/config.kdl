@@ -19,17 +19,15 @@ binds {
     Mod+B { spawn "zen-browser"; }
     Mod+Alt+B { spawn "zen-browser" "--private-window"; }
 
-    Mod+D { spawn-sh "noctalia msg panel-toggle launcher"; }
-    Mod+S { spawn-sh "noctalia msg panel-toggle control-center"; }
     Mod+Comma { spawn-sh "noctalia msg settings-toggle"; }
     Alt+Tab { spawn-sh "noctalia msg window-switcher"; }
-
-    Ctrl+Alt+Delete { spawn-sh "noctalia msg panel-toggle session"; }
     Mod+V { spawn-sh "noctalia msg panel-toggle clipboard"; }
-    Mod+W { spawn-sh "noctalia msg panel-toggle wallpaper"; }
+    Mod+S { spawn-sh "noctalia msg panel-toggle control-center"; }
+    Mod+Space { spawn-sh "noctalia msg panel-toggle launcher"; }
     Mod+Alt+W { spawn-sh "noctalia msg panel-toggle noctalia/wallhaven:browser"; }
-
     Mod+P { spawn-sh "hyprpicker --autocopy --format=hex --notify --lowercase-hex"; }
+    Ctrl+Alt+Delete { spawn-sh "noctalia msg panel-toggle session"; }
+    Mod+W { spawn-sh "noctalia msg panel-toggle wallpaper"; }
 
     XF86AudioRaiseVolume allow-when-locked=true { spawn-sh "wpctl set-volume @DEFAULT_AUDIO_SINK@ 0.05+ -l 1.0"; }
     XF86AudioLowerVolume allow-when-locked=true { spawn-sh "wpctl set-volume @DEFAULT_AUDIO_SINK@ 0.05-"; }
@@ -157,8 +155,8 @@ binds {
     Mod+Shift+Minus { set-window-height "-5%"; }
     Mod+Shift+Equal { set-window-height "+5%"; }
 
-    Mod+Space { toggle-window-floating; }
-    Mod+Alt+Space { switch-focus-between-floating-and-tiling; }
+    Mod+Shift+V { toggle-window-floating; }
+    Mod+Alt+V { switch-focus-between-floating-and-tiling; }
 
     Print { spawn-sh "flameshot gui"; }
 }
@@ -213,10 +211,6 @@ layout {
 
         draw-behind-window true
 
-        softness 22
-
-        spread 1
-
         offset x=0 y=0
 
         color "#11111b80"
@@ -255,7 +249,7 @@ environment {
 }
 
 cursor {
-    xcursor-theme "Breeze-Catppuccin"
+    xcursor-theme "Adwaita-Catppuccin"
     xcursor-size 24
 
     hide-when-typing

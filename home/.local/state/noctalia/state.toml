@@ -1,3 +1,6 @@
+[plugin_store]
+sort = "name_asc"
+
 [security_migrations]
 calendar_credentials_v1 = true
 
