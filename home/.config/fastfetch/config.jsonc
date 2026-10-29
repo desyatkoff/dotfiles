@@ -7,7 +7,9 @@
             "2": "blue"
         },
         "padding": {
+            "top": 1,
             "left": 0,
+            "bottom": 0,
             "right": 1
         }
     },
@@ -60,9 +62,14 @@
             "format": "{width}x{height}{$1}│"
         },
         {
+            "type": "de",
+            "key": "{#}│ {#blue} DE",
+            "format": "{pretty-name} {version}{$1}│"
+        },
+        {
             "type": "wm",
             "key": "{#}│ {#blue} WM",
-            "format": "{pretty-name} {version} ({protocol-name}){$1}│"
+            "format": "{pretty-name} ({protocol-name}){$1}│"
         },
         {
             "type": "theme",
